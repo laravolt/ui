@@ -7,18 +7,19 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('dist/all.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('laravolt/semantic/semantic.min.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('laravolt/css/all.css') }}"/>
 
     @stack('head')
     @stack('style')
 
 </head>
 
-<body id="@yield('page.id')">
+<body class="layout--sidebar">
 
 @yield('body')
 
-<script type="text/javascript" src="{{ asset('dist/all.js') }}"></script>
+<script type="text/javascript" src="{{ asset('laravolt/js/all.js') }}"></script>
 
 @stack('body')
 @stack('script')

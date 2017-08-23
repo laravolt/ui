@@ -34,6 +34,9 @@ class ServiceProvider extends BaseServiceProvider
                 );
             }
         );
+
+        // register command
+        $this->commands(AssetLinkCommand::class);
     }
 
     /**

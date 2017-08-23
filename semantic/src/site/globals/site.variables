@@ -1,0 +1,14 @@
+/*******************************
+     User Global Variables
+*******************************/
+@headerFont : -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,"Helvetica Neue", sans-serif;
+@pageFont : @headerFont ;
+@importGoogleFonts : false;
+
+@textColor : #59595a;
+
+@h1 : unit((36 / 14), rem);
+@h2 : unit((24 / 14), rem);
+@h3 : unit((21 / 14), rem);
+@h4 : unit((18 / 14), rem);
+@h5 : unit((16 / 14), rem);

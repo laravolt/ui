@@ -1,0 +1,140 @@
+$header-height: 60px;
+$header-color: #44425B;
+
+$sidebar-width: 200px;
+$sidebar-color: #fff;
+$sidebar-padding: 5px;
+
+$menu-header-color: #788288;
+$menu-item-color: #acbcc4;
+
+.layout--sidebar {
+
+  .simplebar-scrollbar {
+    width: 5px !important;
+    right: 0 !important;
+  }
+  .simplebar-content {
+    padding-bottom: 0 !important;
+  }
+
+  header.ui.menu {
+    height: $header-height;
+    border: 0 none;
+
+    @if $header-color {
+      background-color: $header-color;
+    }
+
+    .item.brand {
+      width: $sidebar-width;
+      //background-color: darken($sidebar-color, 5);
+    }
+  }
+
+  .layout__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sidebar {
+    position: relative;
+    z-index: 1;
+    width: $sidebar-width;
+    flex: 0 0 auto;
+    -webkit-box-flex: 0;
+  }
+
+  .sidebar__wrapper {
+    position: fixed;
+    overflow: hidden;
+    outline: none;
+    height: 100%;
+    top: $header-height;
+    border-right: 1px solid #eaecf0;
+    width: $sidebar-width;
+    padding: 0;
+
+    @if $sidebar-color {
+      background-color: $sidebar-color;
+    }
+
+    .ui.menu.vertical {
+      background: transparent;
+
+      .icon.left {
+        float: left;
+        margin: 0 1rem 0 0;
+      }
+
+      i.angle.down.icon {
+        margin: 0 -0.5rem 0 0;
+        float: right;
+        opacity: .5;
+      }
+
+      .item {
+        > .header {
+          font-weight: 700;
+          text-transform: uppercase;
+          margin: 1.5rem .5rem 0;
+          letter-spacing: .5px;
+          //text-align: center;
+        }
+        &:before {
+          height: 0;
+        }
+        .item {
+          color: $menu-item-color;
+        }
+      }
+    }
+  }
+
+  .sidebar__menu.ui.menu {
+    border: 0 none;
+    margin: 0;
+  }
+
+  .content {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+
+    .content__inner {
+      min-height: 800px;
+    }
+
+    .content__body {
+      margin-top: $header-height;
+    }
+  }
+}
+
+.sidebar__accordion.ui.accordion {
+
+  .title {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    //text-transform: uppercase;
+    //font-size: .9rem;
+  }
+
+  .content {
+    background-color: darken($sidebar-color, 2);
+    //border-bottom: 1px solid #eaecf0;
+
+    .ui.list {
+      margin: 10px 10px 0 35px;
+
+      &.last {
+        margin-bottom: 15px;
+      }
+
+      .item {
+        line-height: 1.5rem;
+        border: 0 none;
+      }
+    }
+  }
+
+}

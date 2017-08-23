@@ -1,4 +1,4 @@
-<div class="ui accordion">
+<div class="ui accordion sidebar__accordion">
     @foreach($items as $item)
 
         @if($item->hasChildren())
