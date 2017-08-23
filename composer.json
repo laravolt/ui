@@ -1,0 +1,41 @@
+{
+    "name": "laravolt/ui",
+    "description": "Admin template based on Laravel and Semantic UI",
+    "keywords": [
+        "laravel",
+        "laravolt",
+        "admin",
+        "template",
+        "ui"
+    ],
+    "homepage": "https://github.com/laravolt/ui",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bayu Hendra Winata",
+            "email": "uyab.exe@gmail.com",
+            "homepage": "http://id-laravel.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "illuminate/support": "~5.2",
+        "lavary/laravel-menu": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laravolt\\Ui\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Laravolt\\Ui\\ServiceProvider"
+            ]
+        }
+    }
+}
