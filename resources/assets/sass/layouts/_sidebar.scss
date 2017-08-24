@@ -1,7 +1,10 @@
 $header-height: 60px;
 $header-color: #44425B;
 
-$sidebar-width: 200px;
+$sidebar-width-thin: 150px;
+$sidebar-width-normal: 260px;
+$sidebar-width-wide: 350px;
+
 $sidebar-color: #fff;
 $sidebar-padding: 5px;
 
@@ -27,7 +30,6 @@ $menu-item-color: #acbcc4;
     }
 
     .item.brand {
-      width: $sidebar-width;
       //background-color: darken($sidebar-color, 5);
     }
   }
@@ -40,9 +42,12 @@ $menu-item-color: #acbcc4;
   .sidebar {
     position: relative;
     z-index: 1;
-    width: $sidebar-width;
     flex: 0 0 auto;
     -webkit-box-flex: 0;
+    width: $sidebar-width-normal;
+
+    &.thin {width: $sidebar-width-thin}
+    &.wide {width: $sidebar-width-wide}
   }
 
   .sidebar__wrapper {
@@ -52,8 +57,8 @@ $menu-item-color: #acbcc4;
     height: 100%;
     top: $header-height;
     border-right: 1px solid #eaecf0;
-    width: $sidebar-width;
     padding: 0;
+    width: inherit;
 
     @if $sidebar-color {
       background-color: $sidebar-color;
