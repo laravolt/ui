@@ -18,3 +18,6 @@ $ composer require laravolt/ui
 Laravolt\Ui\ServiceProvider::class,
 ...
 ```
+
+## 3. Link assets
+`php artisan laravolt:assets:link`
