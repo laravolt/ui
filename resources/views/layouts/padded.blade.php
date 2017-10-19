@@ -4,7 +4,7 @@
 
 
     <div class="layout__wrapper">
-        <div class="sidebar">
+        <div class="sidebar thin">
             <div class="sidebar__wrapper" data-role="sidebar">
                 @include('ui::menu.sidebar')
             </div>

@@ -779,7 +779,7 @@ ul.messenger-theme-dark .messenger-message-slot.messenger-first.messenger-last .
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   -webkit-box-flex: 0;
-  width: 260px;
+  width: 220px;
 }
 
 .layout--sidebar .sidebar.thin {
@@ -787,7 +787,7 @@ ul.messenger-theme-dark .messenger-message-slot.messenger-first.messenger-last .
 }
 
 .layout--sidebar .sidebar.wide {
-  width: 350px;
+  width: 300px;
 }
 
 .layout--sidebar .sidebar__wrapper {
