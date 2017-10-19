@@ -12130,15 +12130,15 @@ img.ui.bordered.image {
 /* browsers require these rules separate */
 
 .ui.input input::-webkit-input-placeholder {
-  color: #ffffff;
+  color: #cccccd;
 }
 
 .ui.input input::-moz-placeholder {
-  color: #ffffff;
+  color: #cccccd;
 }
 
 .ui.input input:-ms-input-placeholder {
-  color: #ffffff;
+  color: #cccccd;
 }
 
 /*******************************
@@ -12223,17 +12223,17 @@ img.ui.bordered.image {
 
 .ui.input.focus input::-webkit-input-placeholder,
 .ui.input input:focus::-webkit-input-placeholder {
-  color: #cccccd;
+  color: #99999a;
 }
 
 .ui.input.focus input::-moz-placeholder,
 .ui.input input:focus::-moz-placeholder {
-  color: #cccccd;
+  color: #99999a;
 }
 
 .ui.input.focus input:-ms-input-placeholder,
 .ui.input input:focus:-ms-input-placeholder {
-  color: #cccccd;
+  color: #99999a;
 }
 
 /*--------------------
@@ -18048,27 +18048,27 @@ ol.ui.horizontal.list li:before,
 /* browsers require these rules separate */
 
 .ui.form ::-webkit-input-placeholder {
-  color: #ffffff;
+  color: #cccccd;
 }
 
 .ui.form :-ms-input-placeholder {
-  color: #ffffff;
+  color: #cccccd;
 }
 
 .ui.form ::-moz-placeholder {
-  color: #ffffff;
+  color: #cccccd;
 }
 
 .ui.form :focus::-webkit-input-placeholder {
-  color: #cccccd;
+  color: #99999a;
 }
 
 .ui.form :focus:-ms-input-placeholder {
-  color: #cccccd;
+  color: #99999a;
 }
 
 .ui.form :focus::-moz-placeholder {
-  color: #cccccd;
+  color: #99999a;
 }
 
 /* Error Placeholder */
@@ -21380,8 +21380,8 @@ ol.ui.horizontal.list li:before,
   -webkit-box-align: inherit;
   -ms-flex-align: inherit;
   align-items: inherit;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
   -ms-flex-direction: inherit;
   flex-direction: inherit;
 }
@@ -30320,7 +30320,7 @@ select.ui.dropdown {
 }
 
 .ui.active.search.dropdown input.search:focus + .text {
-  color: #cccccd !important;
+  color: #99999a !important;
 }
 
 /* Search Menu */
@@ -30588,12 +30588,12 @@ select.ui.dropdown {
 
 .ui.dropdown:not(.button) > .default.text,
 .ui.default.dropdown:not(.button) > .text {
-  color: #ffffff;
+  color: #cccccd;
 }
 
 .ui.dropdown:not(.button) > input:focus ~ .default.text,
 .ui.default.dropdown:not(.button) > input:focus ~ .text {
-  color: #cccccd;
+  color: #99999a;
 }
 
 /*--------------------
