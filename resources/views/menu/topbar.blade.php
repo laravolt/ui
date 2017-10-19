@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="ui item dropdown simple right">
-            <img src="{{ \Laravolt\Avatar\Facade::create('Andry Botax')->toBase64() }}" alt="" class="ui image avatar">
+            <img src="{{ \Laravolt\Avatar\Facade::create(auth()->user()->name)->toBase64() }}" alt="" class="ui image avatar">
             <i class="icon dropdown"></i>
             <div class="menu">
                 <a href="{{ route('auth::logout') }}" class="item">Logout</a>
