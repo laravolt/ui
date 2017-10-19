@@ -825,12 +825,3 @@ ul.messenger-theme-dark .messenger-message-slot.messenger-first.messenger-last .
   line-height: 1.5rem;
   border: 0 none;
 }
-
-.layout--auth {
-  background-image: url("../img/bg/temple.jpg");
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
-}
