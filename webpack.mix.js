@@ -18,7 +18,10 @@ mix.scripts([
     'resources/assets/js/app.js'
 ], 'public/js/all.js');
 
-mix.sass('resources/assets/sass/app.scss', 'public/css');
+mix.sass('resources/assets/sass/app.scss', 'public/css')
+    .options({
+        processCssUrls: false
+    });
 
 mix.styles([
     './node_modules/simplebar/dist/simplebar.css',
