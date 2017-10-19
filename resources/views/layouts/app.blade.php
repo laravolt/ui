@@ -1,8 +1,6 @@
 @extends('ui::layouts.base')
 
 @section('body')
-
-
     <div class="layout__wrapper">
         <div class="sidebar">
             <div class="sidebar__wrapper" data-role="sidebar">
@@ -22,5 +20,4 @@
             </div>
         </div>
     </div>
-
 @endsection
