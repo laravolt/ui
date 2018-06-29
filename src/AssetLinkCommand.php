@@ -11,7 +11,7 @@ class AssetLinkCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'laravolt:assets:link';
+    protected $signature = 'laravolt:link-assets';
 
     /**
      * The console command description.
