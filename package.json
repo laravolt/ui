@@ -11,8 +11,8 @@
     "devDependencies": {
         "cross-env": "^5.0.1",
         "jquery": "^3.1.1",
-        "laravel-mix": "^1.0",
-        "semantic-ui": "^2.2.13",
+        "laravel-mix": "^2.0",
+        "semantic-ui": "^2.3.2",
         "simplebar": "^2.4.3"
     }
 }
