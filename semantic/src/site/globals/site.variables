@@ -5,9 +5,13 @@
 @pageFont : @headerFont ;
 @importGoogleFonts : false;
 
-@textColor : #59595a;
-@inputPlaceholderColor: lighten(@inputColor, 45);
-@inputPlaceholderFocusColor: lighten(@inputColor, 25);
+@emSize   : 13px;
+@fontSize : 13px;
+
+@textColor : #373e43;
+@linkColor : #007be8;
+@inputPlaceholderColor : lighten(@inputColor , 45);
+@inputPlaceholderFocusColor : lighten(@inputColor , 25);
 
 @h1 : unit((36 / 14), rem);
 @h2 : unit((24 / 14), rem);

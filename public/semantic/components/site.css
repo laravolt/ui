@@ -18,7 +18,7 @@ body {
   height: 100%;
 }
 html {
-  font-size: 14px;
+  font-size: 13px;
 }
 body {
   margin: 0px;
@@ -27,9 +27,9 @@ body {
   min-width: 320px;
   background: #FFFFFF;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.4285em;
-  color: #59595a;
+  color: #373e43;
   font-smoothing: antialiased;
 }
 
@@ -101,11 +101,11 @@ p:last-child {
 --------------------*/
 
 a {
-  color: #4183C4;
+  color: #007be8;
   text-decoration: none;
 }
 a:hover {
-  color: #1e70bf;
+  color: #0069c5;
   text-decoration: none;
 }
 
@@ -124,32 +124,32 @@ a:hover {
 /* Site */
 ::-webkit-selection {
   background-color: #CCE2FF;
-  color: #59595a;
+  color: #373e43;
 }
 ::-moz-selection {
   background-color: #CCE2FF;
-  color: #59595a;
+  color: #373e43;
 }
 ::selection {
   background-color: #CCE2FF;
-  color: #59595a;
+  color: #373e43;
 }
 
 /* Form */
 textarea::-webkit-selection,
 input::-webkit-selection {
   background-color: rgba(100, 100, 100, 0.4);
-  color: #59595a;
+  color: #373e43;
 }
 textarea::-moz-selection,
 input::-moz-selection {
   background-color: rgba(100, 100, 100, 0.4);
-  color: #59595a;
+  color: #373e43;
 }
 textarea::selection,
 input::selection {
   background-color: rgba(100, 100, 100, 0.4);
-  color: #59595a;
+  color: #373e43;
 }
 
 /* Force Simple Scrollbars */

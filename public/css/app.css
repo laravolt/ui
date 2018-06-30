@@ -690,19 +690,14 @@ ul.messenger-theme-dark .messenger-message-slot.messenger-first.messenger-last .
   border-radius: 4px;
 }
 
-.layout--sidebar .simplebar-scrollbar {
-  width: 5px !important;
-  right: 0 !important;
-}
-
 .layout--sidebar .simplebar-content {
-  padding-bottom: 0 !important;
+  padding-top: 60px;
 }
 
 .layout--sidebar header.ui.menu {
   height: 60px;
   border: 0 none;
-  background-color: #44425B;
+  background-color: #FFFFFF;
 }
 
 .layout--sidebar .layout__wrapper {
@@ -737,11 +732,10 @@ ul.messenger-theme-dark .messenger-message-slot.messenger-first.messenger-last .
   overflow: hidden;
   outline: none;
   height: 100%;
-  top: 60px;
   border-right: 1px solid #eaecf0;
   padding: 0;
   width: inherit;
-  background-color: #fff;
+  background-color: #FFFFFF;
 }
 
 .layout--sidebar .sidebar__wrapper .ui.menu.vertical {
@@ -753,7 +747,7 @@ ul.messenger-theme-dark .messenger-message-slot.messenger-first.messenger-last .
   margin: 0 1rem 0 0;
 }
 
-.layout--sidebar .sidebar__wrapper .ui.menu.vertical i.angle.down.icon {
+.layout--sidebar .sidebar__wrapper .ui.menu.vertical i.angle.icon {
   margin: 0 -0.5rem 0 0;
   float: right;
   opacity: .5;
@@ -768,10 +762,6 @@ ul.messenger-theme-dark .messenger-message-slot.messenger-first.messenger-last .
 
 .layout--sidebar .sidebar__wrapper .ui.menu.vertical .item:before {
   height: 0;
-}
-
-.layout--sidebar .sidebar__wrapper .ui.menu.vertical .item .item {
-  color: #acbcc4;
 }
 
 .layout--sidebar .sidebar__menu.ui.menu {
@@ -799,11 +789,13 @@ ul.messenger-theme-dark .messenger-message-slot.messenger-first.messenger-last .
 }
 
 .sidebar__accordion.ui.accordion .content {
-  background-color: #fafafa;
+  background-color: #f6f9fa;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .sidebar__accordion.ui.accordion .content .ui.list {
-  margin: 10px 10px 0 35px;
+  margin: 0;
 }
 
 .sidebar__accordion.ui.accordion .content .ui.list.last {
@@ -813,4 +805,5 @@ ul.messenger-theme-dark .messenger-message-slot.messenger-first.messenger-last .
 .sidebar__accordion.ui.accordion .content .ui.list .item {
   line-height: 1.5rem;
   border: 0 none;
+  padding: 0.75em 1em 0.75em 3.5em;
 }

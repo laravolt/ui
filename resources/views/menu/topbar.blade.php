@@ -1,5 +1,5 @@
-<header class="ui menu fixed top small">
-    <div class="brand item"><h3 class="ui header inverted"><img src="{{ asset('img/logo.png') }}" class="ui image mini" alt="">{{ config('app.name') }}</h3></div>
+<header class="ui menu fixed top small borderless">
+    <div class="brand item"><h3 class="ui header"><img src="{{ asset('img/logo.png') }}" class="ui image mini" alt="">{{ config('app.name') }}</h3></div>
     {{--<div class="item"><h3 class="ui header inverted">Page Header</h3></div>--}}
     <div class="menu right">
         <div class="item ui dropdown simple right">
