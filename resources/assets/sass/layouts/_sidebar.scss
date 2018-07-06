@@ -1,24 +1,26 @@
-$header-height: 60px;
-$header-color: #FFFFFF;
-
 $sidebar-width-thin: 150px;
 $sidebar-width-normal: 220px;
 $sidebar-width-wide: 300px;
-
 $sidebar-color: #FFFFFF;
 
+$header-height: 60px;
+$header-color: #FFFFFF;
+$header-width: calc(100% - #{$sidebar-width-normal} + 2px);
 //$menu-header-color: #788288;
 $menu-item-color: #000;
 
 .layout--sidebar {
 
   .simplebar-content {
-    padding-top: $header-height;
+    //padding-top: $header-height;
   }
 
   header.ui.menu {
     height: $header-height;
     border: 0 none;
+    left: $sidebar-width-normal + 1px;
+    width: $header-width;
+    max-width: $header-width;
 
     @if $header-color {
       background-color: $header-color;
@@ -87,9 +89,16 @@ $menu-item-color: #000;
     }
   }
 
-  .sidebar__menu.ui.menu {
-    border: 0 none;
-    margin: 0;
+  .sidebar__menu {
+    .brand {
+      padding: 20px;
+      margin-bottom: 0;
+      font-size: 2.5em;
+    }
+    .ui.menu {
+      border: 0 none;
+      margin: 0;
+    }
   }
 
   .content {

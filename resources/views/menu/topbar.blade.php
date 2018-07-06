@@ -1,9 +1,17 @@
-<header class="ui menu fixed top small borderless">
-    <div class="brand item"><h3 class="ui header"><img src="{{ asset('img/logo.png') }}" class="ui image mini" alt="">{{ config('app.name') }}</h3></div>
-    {{--<div class="item"><h3 class="ui header inverted">Page Header</h3></div>--}}
+<header class="ui menu small borderless fixed top b-0">
+    {{--<div class="item"><h3 class="ui header">Page Header</h3></div>--}}
+    {{--<div class="item">--}}
+        {{--<div class="ui breadcrumb">--}}
+            {{--<a class="section">Home</a>--}}
+            {{--<i class="right angle icon divider"></i>--}}
+            {{--<a class="section">Store</a>--}}
+            {{--<i class="right angle icon divider"></i>--}}
+            {{--<div class="active section">T-Shirt</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <div class="menu right">
         <div class="item ui dropdown simple right">
-            <i class="icon bell inverted"></i>
+            <i class="icon bell"></i>
             <div class="menu notification">
                 <div class="ui comments">
                     <h4 class="ui divider horizontal p-1">Notifikasi</h4>
@@ -27,7 +35,7 @@
                         </div>
                     @endforeach
                 </div>
-                <a href="" class="item footer">Lihat Semua</a>
+                <a href="" class="item footer text-center">Lihat Semua</a>
             </div>
         </div>
         <div class="ui item dropdown simple right">
