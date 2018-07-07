@@ -3,6 +3,7 @@
 namespace Laravolt\Ui;
 
 use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Http\Kernel;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Lavary\Menu\Builder;
 
@@ -48,6 +49,12 @@ class ServiceProvider extends BaseServiceProvider
     public function boot()
     {
         $this->registerViews();
+
+        $this->registerFlash();
+
+        if (!$this->app->runningInConsole()) {
+            // $this->app[Kernel::class]->pushMiddleware($this->app['laravolt.flash.middleware']);
+        }
     }
 
     /**
@@ -66,5 +73,16 @@ class ServiceProvider extends BaseServiceProvider
             [realpath(__DIR__ . '/../resources/views') => base_path('resources/views/vendor/ui')],
             'views'
         );
+    }
+
+    protected function registerFlash()
+    {
+        $this->app->singleton('laravolt.flash', function (Application $app) {
+            return $app->make(Flash::class);
+        });
+
+        $this->app->singleton('laravolt.flash.middleware', function (Application $app) {
+            return new FlashMiddleware($app['laravolt.flash']);
+        });
     }
 }

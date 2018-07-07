@@ -1,7 +1,7 @@
 $(function () {
 
     new SimpleBar($('[data-role="sidebar"]')[0])
-    $('[data-role="sidebar-accordion"]]').accordion({
+    $('[data-role="sidebar-accordion"]').accordion({
         selector: {
             trigger: '.title:not(.empty)'
         }

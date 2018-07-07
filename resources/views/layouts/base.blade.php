@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('laravolt/semantic/semantic.min.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('laravolt/css/all.css') }}"/>
     @stack('style')
+    @stack('head')
 
 </head>
 
@@ -19,8 +20,8 @@
 @yield('body')
 
 <script type="text/javascript" src="{{ asset('laravolt/js/all.js') }}"></script>
-
 @stack('script')
+@stack('body')
 
 </body>
 </html>

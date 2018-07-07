@@ -15,6 +15,7 @@ mix.scripts([
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/semantic-ui/dist/semantic.min.js',
     './node_modules/simplebar/dist/simplebar.js',
+    'resources/assets/js/components/flash.js',
     'resources/assets/js/app.js'
 ], 'public/js/all.js');
 

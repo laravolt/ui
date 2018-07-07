@@ -35410,6 +35410,11 @@ body.pushable > .pusher {
 /*******************************
         User Overrides
 *******************************/
+
+.ui.tab [class="left attached"] .item {
+  border-left: 0 none !important;
+  border-top-left-radius: 0 !important;
+}
 /*!
  * # Semantic UI 2.3.2 - Transition
  * http://github.com/semantic-org/semantic-ui/
