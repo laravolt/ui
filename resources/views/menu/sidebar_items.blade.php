@@ -16,7 +16,7 @@
                     </div>
                 @endif
             </div>
-        @else
+        @elseif(auth()->user()->can($item->data('permission')))
             <a class="title empty {{ Laravolt\Ui\Menu::setActiveParent($item->children(), $item->link->isActive) }}" href="{{ $item->url() }}">
                 <i class="left icon {{ $item->data('icon') }}"></i>
                 {{ $item->title }}

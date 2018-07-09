@@ -33,6 +33,7 @@ $(function () {
     $('.checkbox[data-toggle="checkall"]').each(function () {
         var $parent = $(this);
         var $childCheckbox = $(document).find($parent.data('selector'));
+        var $storage = $(document).find($parent.data('storage'));
 
         $parent
             .checkbox({
@@ -78,6 +79,10 @@ $(function () {
                         var replaceStartFrom = url.lastIndexOf('/');
                         var newUrl = url.substr(0, replaceStartFrom) + '/' + ids.join(',');
                         $('form[data-type="delete-multiple"]').attr('action', newUrl);
+                    }
+
+                    if ($storage.length > 0) {
+                        $storage.val(ids.join(',')).trigger('change');
                     }
 
                     // set parent checkbox state, but dont trigger its onChange callback
