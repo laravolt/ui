@@ -7,13 +7,11 @@
         justify-content: center;"
     >
         <div style="flex: 1;">
-            <div class="ui centered stackable grid">
-                <div class="column six wide center aligned">
-                    <div class="ui segment very padded container text">
-                        <h1 class="ui header">{{ config('app.name') }}</h1>
-                        <div class="ui divider hidden"></div>
-                        @yield('content')
-                    </div>
+            <div class="column six wide center aligned">
+                <div class="ui segment very padded container text center aligned">
+                    <h1 class="ui header">{{ config('app.name') }}</h1>
+                    <div class="ui divider hidden"></div>
+                    @yield('content')
                 </div>
             </div>
         </div>
