@@ -1,7 +1,7 @@
 $sidebar-width-thin: 150px;
 $sidebar-width-normal: 220px;
 $sidebar-width-wide: 300px;
-$sidebar-color: #FFFFFF;
+$sidebar-color: #f6f9fa;
 
 $header-height: 60px;
 $header-color: #FFFFFF;
@@ -122,10 +122,13 @@ $menu-item-color: #000;
     padding: 0.75rem 1.5rem;
     //text-transform: uppercase;
     //font-size: .9rem;
+    &:hover, &.active {
+      background: darken($sidebar-color, 8%);
+    }
   }
 
   .content {
-    background-color: #f6f9fa;
+    background-color: darken($sidebar-color, 5%);
     //border-bottom: 1px solid #eaecf0;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
