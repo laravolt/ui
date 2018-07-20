@@ -20,4 +20,4 @@ Laravolt\Ui\ServiceProvider::class,
 ```
 
 ## 3. Link assets
-`php artisan laravolt:assets:link`
+`php artisan laravolt:link-assets`
