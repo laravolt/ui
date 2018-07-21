@@ -53,7 +53,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->registerFlash();
 
         if (!$this->app->runningInConsole()) {
-            // $this->app[Kernel::class]->pushMiddleware($this->app['laravolt.flash.middleware']);
+            $this->app['router']->pushMiddlewareToGroup('web', FlashMiddleware::class);
         }
     }
 
