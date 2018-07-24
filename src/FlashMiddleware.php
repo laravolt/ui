@@ -33,10 +33,10 @@ class FlashMiddleware
      */
     public function handle($request, Closure $next)
     {
-        try {
-            /** @var \Illuminate\Http\Response $response */
-            $response = $next($request);
+        /** @var \Illuminate\Http\Response $response */
+        $response = $next($request);
 
+        try {
             if ($request->session()->has('errors')) {
                 $message = $request->session()->get('errors');
 
