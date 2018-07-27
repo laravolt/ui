@@ -41,7 +41,7 @@ class FlashMiddleware
                 $message = $request->session()->get('errors');
 
                 if ($message instanceof ViewErrorBag) {
-                    $message = collect($message->all())->flatten()->implode('<br />');
+                    $message = collect($message->unique())->implode('<br />');
                 }
 
                 $this->flash->now()->error($message);
