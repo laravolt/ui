@@ -123,7 +123,7 @@ $menu-item-color: #000;
     //text-transform: uppercase;
     //font-size: .9rem;
     &:hover, &.active {
-      background: darken($sidebar-color, 8%);
+      background: darken($sidebar-color, 15%);
     }
   }
 
@@ -138,7 +138,16 @@ $menu-item-color: #000;
       .item {
         line-height: 1.5rem;
         border: 0 none;
-        padding: 0.75em 1em 0.75em 3.5em;
+        padding: 0.9em 1em 0.9em 3.5em;
+        color: $menu-item-color;
+
+        &:hover{
+          background: darken($sidebar-color, 7.5%);
+        }
+        &.active  {
+          background-color: transparent;
+          font-weight: 700;
+        }
       }
     }
   }
