@@ -49,6 +49,9 @@ class ServiceProvider extends BaseServiceProvider
     public function boot()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravolt.ui');
+        $theme = $this->app['config']->get('laravolt.ui.sidebar_theme');
+        $themeOptions = $this->app['config']->get('laravolt.ui.themes.'.$theme);
+        $this->app['config']->set('laravolt.ui.options', $themeOptions);
 
         $this->registerViews();
 

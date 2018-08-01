@@ -11,10 +11,6 @@ $menu-item-color: #000;
 
 .layout--sidebar {
 
-  .simplebar-content {
-    //padding-top: $header-height;
-  }
-
   header.ui.menu {
     height: $header-height;
     border: 0 none;
@@ -24,10 +20,6 @@ $menu-item-color: #000;
 
     @if $header-color {
       //background-color: $header-color;
-    }
-
-    .item.brand {
-      //background-color: darken($sidebar-color, 5);
     }
   }
 
@@ -58,6 +50,10 @@ $menu-item-color: #000;
 
     @if $sidebar-color {
       background-color: $sidebar-color;
+    }
+
+    .ui.header.brand {
+      height: $header-height;
     }
 
     .ui.menu.vertical {

@@ -1,14 +1,31 @@
-$sidebar-color: #3a3f51;
+$sidebar-color: #3d464d;
 $header-color: #FFFFFF;
-$menu-item-color: #a6a8b1;
-$menu-item-active-indicator: #a6a8b1;
+$menu-item-color: rgba(255,255,255,0.6);
+$blue: #2185D0;
 
-[data-theme="dark"] {
+[data-theme="dark-blue"] {
+
+  header.ui.menu {
+    background-color: $blue;
+    left: $sidebar-width-normal;
+    .item {
+      color: #fff;
+    }
+  }
 
   .sidebar {
     .sidebar__wrapper {
-      border-right: 1px solid #eaecf0;
+      border-right: 0 none;
       background-color: $sidebar-color;
+
+      .ui.header.brand {
+        background-color: darken($blue, 5%);
+        color: #fff;
+        overflow: hidden;
+        height: 63px;
+        font-size: 1.75rem;
+        text-align: center;
+      }
 
       .ui.menu.vertical {
         background: transparent;
@@ -48,7 +65,7 @@ $menu-item-active-indicator: #a6a8b1;
         &.active {
           background: darken($sidebar-color, 5%);
           &.empty {
-            border-left: 5px solid $menu-item-active-indicator;
+            border-left: 5px solid $blue;
             padding-left: calc(1.5rem - 5px);
           }
         }
@@ -69,7 +86,7 @@ $menu-item-active-indicator: #a6a8b1;
             &.active {
               background: darken($sidebar-color, 7.5%);
               font-weight: normal;
-              border-left: 5px solid $menu-item-active-indicator;
+              border-left: 5px solid $blue;
               padding-left: calc(4.5rem - 5px);
             }
           }
