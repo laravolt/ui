@@ -1,15 +1,11 @@
 $sidebar-width-thin: 150px;
 $sidebar-width-normal: 220px;
 $sidebar-width-wide: 300px;
-$sidebar-color: #f6f9fa;
 
 $header-height: 60px;
-$header-color: #FFFFFF;
 $header-width: calc(100% - #{$sidebar-width-normal} + 2px);
-//$menu-header-color: #788288;
-$menu-item-color: #000;
 
-.layout--sidebar {
+.layout--app {
 
   display: flex;
   flex-direction: row;
@@ -20,10 +16,6 @@ $menu-item-color: #000;
     left: $sidebar-width-normal + 1px;
     width: $header-width;
     max-width: $header-width;
-
-    @if $header-color {
-      //background-color: $header-color;
-    }
   }
 
   .sidebar {
@@ -45,10 +37,6 @@ $menu-item-color: #000;
     border-right: 1px solid #eaecf0;
     padding: 0;
     width: inherit;
-
-    @if $sidebar-color {
-      background-color: $sidebar-color;
-    }
 
     .ui.header.brand {
       height: $header-height;
@@ -114,11 +102,7 @@ $menu-item-color: #000;
   .title {
     display: block;
     padding: 0.75rem 1.5rem;
-    //text-transform: uppercase;
-    //font-size: .9rem;
-    &:hover, &.active {
-      background: darken($sidebar-color, 15%);
-    }
+
     .icon.angle {
       transition: .5s all;
       width: auto;
@@ -132,7 +116,6 @@ $menu-item-color: #000;
   }
 
   .content {
-    background-color: darken($sidebar-color, 5%);
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 
@@ -143,13 +126,11 @@ $menu-item-color: #000;
         line-height: 1.5rem;
         border: 0 none;
         padding: 0.9em 1em 0.9em 4.5em;
-        color: $menu-item-color;
 
         &:hover{
-          background: darken($sidebar-color, 7.5%);
+
         }
         &.active  {
-          background-color: darken($sidebar-color, 5%);
           font-weight: 700;
         }
       }
