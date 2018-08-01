@@ -903,7 +903,7 @@ table.ui.table tbody td.numbering {
 }
 
 .layout--sidebar .sidebar.sidebar--dark .sidebar__accordion.ui.accordion .title.active.empty {
-  border-left: 5px solid #007be8;
+  border-left: 5px solid #a6a8b1;
   padding-left: calc(1.5rem - 5px);
 }
 
@@ -926,6 +926,6 @@ table.ui.table tbody td.numbering {
 .layout--sidebar .sidebar.sidebar--dark .sidebar__accordion.ui.accordion .content .ui.list .item.active {
   background: #2a2e3b;
   font-weight: normal;
-  border-left: 5px solid #007be8;
+  border-left: 5px solid #a6a8b1;
   padding-left: calc(4.5rem - 5px);
 }
