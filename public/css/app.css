@@ -743,7 +743,7 @@ table.ui.table tbody td.numbering {
 .layout--app header.ui.menu {
   height: 60px;
   border: 0 none;
-  left: 221px;
+  left: 220px;
   width: calc(100% - 220px + 2px);
   max-width: calc(100% - 220px + 2px);
 }
@@ -864,6 +864,11 @@ table.ui.table tbody td.numbering {
 
 .sidebar__accordion.ui.accordion .content .ui.list .item.active {
   font-weight: 700;
+}
+
+[data-theme="light"] header.ui.menu {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 [data-theme="light"] .sidebar__wrapper {
@@ -1023,4 +1028,74 @@ table.ui.table tbody td.numbering {
   font-weight: normal;
   border-left: 5px solid #2185D0;
   padding-left: calc(4.5rem - 5px);
+}
+
+[data-theme="purple"] {
+  background: #f3f5f9;
+}
+
+[data-theme="purple"] .sidebar .sidebar__wrapper {
+  border-right: 0 none;
+  background-color: #594f8d;
+}
+
+[data-theme="purple"] .sidebar .sidebar__wrapper .ui.header.brand {
+  color: #bdb8d7;
+  overflow: hidden;
+  height: 63px;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+[data-theme="purple"] .sidebar .sidebar__wrapper .ui.menu.vertical {
+  background: transparent;
+}
+
+[data-theme="purple"] .sidebar .sidebar__wrapper .ui.menu.vertical .item {
+  color: #bdb8d7;
+}
+
+[data-theme="purple"] .sidebar .sidebar__wrapper .ui.menu.vertical .item > .header {
+  color: #363055;
+  font-size: .9em;
+}
+
+[data-theme="purple"] .sidebar .sidebar__menu .brand {
+  color: #bdb8d7;
+}
+
+[data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .title {
+  color: #bdb8d7;
+  font-weight: 700;
+}
+
+[data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .title.active, [data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .title:hover {
+  background-color: #4f467d;
+}
+
+[data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .title:hover {
+  color: #eae9f3;
+}
+
+[data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .title.empty.current {
+  color: #e9b92a;
+}
+
+[data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .content {
+  background-color: #4f467d;
+}
+
+[data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .content .ui.list .item {
+  color: #bdb8d7;
+}
+
+[data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .content .ui.list .item:hover {
+  color: #eae9f3;
+  background-color: #4f467d;
+}
+
+[data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .content .ui.list .item.active {
+  background-color: #4f467d;
+  font-weight: normal;
+  color: #e9b92a;
 }

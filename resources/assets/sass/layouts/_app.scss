@@ -13,7 +13,7 @@ $header-width: calc(100% - #{$sidebar-width-normal} + 2px);
   header.ui.menu {
     height: $header-height;
     border: 0 none;
-    left: $sidebar-width-normal + 1px;
+    left: $sidebar-width-normal;
     width: $header-width;
     max-width: $header-width;
   }

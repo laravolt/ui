@@ -1,4 +1,4 @@
-<header class="ui menu small borderless fixed top b-0 {{ config('laravolt.ui.options.topbar_inverted') ? 'inverted': '' }}">
+<header class="ui menu small borderless fixed top {{ config('laravolt.ui.options.topbar_inverted') ? 'inverted': '' }}">
     {{--<div class="item"><h3 class="ui header">Page Header</h3></div>--}}
     {{--<div class="item">--}}
         {{--<div class="ui breadcrumb">--}}
