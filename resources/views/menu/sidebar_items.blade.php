@@ -5,7 +5,7 @@
             <div class="title {{ Laravolt\Ui\Menu::setActiveParent($item->children(), $item->link->isActive) }}">
                 <i class="left icon {{ $item->data('icon') }}"></i>
                 {{ $item->title }}
-                <i class="angle down icon"></i>
+                <i class="angle left icon"></i>
             </div>
             <div class="content {{ Laravolt\Ui\Menu::setActiveParent($item->children(), $item->link->isActive) }} ">
                 @if($item->hasChildren())

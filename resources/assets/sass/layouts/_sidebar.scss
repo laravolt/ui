@@ -23,7 +23,7 @@ $menu-item-color: #000;
     max-width: $header-width;
 
     @if $header-color {
-      background-color: $header-color;
+      //background-color: $header-color;
     }
 
     .item.brand {
@@ -125,27 +125,39 @@ $menu-item-color: #000;
     &:hover, &.active {
       background: darken($sidebar-color, 15%);
     }
+    .icon.angle {
+      transition: .5s all;
+    }
+    &.active {
+      .icon.angle.left {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+    }
   }
 
   .content {
     background-color: darken($sidebar-color, 5%);
-    //border-bottom: 1px solid #eaecf0;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+
     .ui.list {
       margin: 0;
 
       .item {
         line-height: 1.5rem;
         border: 0 none;
-        padding: 0.9em 1em 0.9em 3.5em;
+        padding: 0.9em 1em 0.9em 4.5em;
         color: $menu-item-color;
 
         &:hover{
           background: darken($sidebar-color, 7.5%);
         }
         &.active  {
-          background-color: transparent;
+          background-color: darken($sidebar-color, 5%);
           font-weight: 700;
         }
       }

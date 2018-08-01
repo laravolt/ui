@@ -1,0 +1,18 @@
+table.ui.table {
+  thead th, tbody td.numbering {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .8em;
+    color: #686f73;
+  }
+  thead th {
+    font-weight: 700;
+  }
+  thead th.numbering {
+
+  }
+  tbody td.numbering {
+    text-align: center;
+    background: #f9fafb;
+  }
+}

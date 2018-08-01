@@ -48,6 +48,8 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function boot()
     {
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravolt.ui');
+
         $this->registerViews();
 
         $this->registerFlash();

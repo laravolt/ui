@@ -8,7 +8,6 @@ $(function () {
     });
 
     $('.ui.checkbox').checkbox();
-    $('.ui.accordion').accordion();
 
     $('.ui.dropdown:not(.tag)').dropdown({
         forceSelection: false
