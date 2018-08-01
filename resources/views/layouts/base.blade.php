@@ -15,7 +15,7 @@
 
 </head>
 
-<body class="layout--sidebar">
+<body>
 
 @yield('body')
 

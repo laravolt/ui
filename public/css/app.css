@@ -730,15 +730,7 @@ table.ui.table tbody td.numbering {
   background: #f9fafb;
 }
 
-.layout--sidebar header.ui.menu {
-  height: 60px;
-  border: 0 none;
-  left: 221px;
-  width: calc(100% - 220px + 2px);
-  max-width: calc(100% - 220px + 2px);
-}
-
-.layout--sidebar .layout__wrapper {
+.layout--sidebar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -746,6 +738,14 @@ table.ui.table tbody td.numbering {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.layout--sidebar header.ui.menu {
+  height: 60px;
+  border: 0 none;
+  left: 221px;
+  width: calc(100% - 220px + 2px);
+  max-width: calc(100% - 220px + 2px);
 }
 
 .layout--sidebar .sidebar {
@@ -843,11 +843,13 @@ table.ui.table tbody td.numbering {
 .sidebar__accordion.ui.accordion .title .icon.angle {
   -webkit-transition: .5s all;
   transition: .5s all;
+  width: auto;
+  height: auto;
 }
 
-.sidebar__accordion.ui.accordion .title.active .icon.angle.left {
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+.sidebar__accordion.ui.accordion .title.active .icon.angle.down {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .sidebar__accordion.ui.accordion .content {

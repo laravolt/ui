@@ -1,7 +1,7 @@
 @extends('ui::layouts.base')
 
 @section('body')
-    <div class="layout__wrapper" data-theme="{{ config('laravolt.ui.sidebar_theme') }}">
+    <div class="layout--sidebar" data-theme="{{ config('laravolt.ui.sidebar_theme') }}">
         @include('ui::menu.sidebar')
 
         <div class="content">
