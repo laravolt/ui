@@ -1053,7 +1053,6 @@ table.ui.table tbody td.numbering {
 [data-theme="purple"] .sidebar .sidebar__wrapper .ui.header.brand {
   color: #bdb8d7;
   overflow: hidden;
-  height: 63px;
   font-size: 1.75rem;
   text-align: center;
 }
@@ -1067,8 +1066,9 @@ table.ui.table tbody td.numbering {
 }
 
 [data-theme="purple"] .sidebar .sidebar__wrapper .ui.menu.vertical .item > .header {
-  color: #363055;
-  font-size: .9em;
+  color: #25213b;
+  font-size: .8em;
+  font-weight: 500;
 }
 
 [data-theme="purple"] .sidebar .sidebar__menu .brand {
@@ -1078,6 +1078,8 @@ table.ui.table tbody td.numbering {
 [data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .title {
   color: #bdb8d7;
   font-weight: 700;
+  text-transform: uppercase;
+  font-size: .9em;
 }
 
 [data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .title.active, [data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .title:hover {
@@ -1097,7 +1099,8 @@ table.ui.table tbody td.numbering {
 }
 
 [data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .content .ui.list .item {
-  color: #bdb8d7;
+  color: #9f97c5;
+  padding-left: 3.7em;
 }
 
 [data-theme="purple"] .sidebar .sidebar__accordion.ui.accordion .content .ui.list .item:hover {
