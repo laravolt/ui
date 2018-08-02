@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body data-theme="{{ config('laravolt.ui.sidebar_theme') }}">
 
 @yield('body')
 

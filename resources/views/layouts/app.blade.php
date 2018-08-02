@@ -1,7 +1,7 @@
 @extends('ui::layouts.base')
 
 @section('body')
-    <div class="layout--app" data-theme="{{ config('laravolt.ui.sidebar_theme') }}">
+    <div class="layout--app">
         @include('ui::menu.sidebar')
 
         <div class="content">
