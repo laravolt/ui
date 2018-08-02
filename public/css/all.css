@@ -1041,6 +1041,88 @@ table.ui.table tbody td.numbering {
   padding-left: calc(4.5rem - 5px);
 }
 
+[data-theme="galaxy"] {
+  background: #f3f3f7;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__wrapper {
+  border-right: 0 none;
+  background-color: #1F2136;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__wrapper .ui.header.brand {
+  color: #A9AEA7;
+  overflow: hidden;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__wrapper .ui.menu.vertical {
+  background: transparent;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__wrapper .ui.menu.vertical .icon.left {
+  color: #4E557A;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__wrapper .ui.menu.vertical i.angle.icon {
+  color: #A9AEA7;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__wrapper .ui.menu.vertical .item {
+  color: #A9AEA7;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__wrapper .ui.menu.vertical .item > .header {
+  color: #6f7aae;
+  font-size: .9em;
+  font-weight: 700;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__menu .brand {
+  color: #A9AEA7;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__accordion.ui.accordion .title {
+  color: #A9AEA7;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__accordion.ui.accordion .title.active, [data-theme="galaxy"] .sidebar .sidebar__accordion.ui.accordion .title:hover {
+  background-color: #161726;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__accordion.ui.accordion .title:hover {
+  color: #d0d3cf;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__accordion.ui.accordion .title.empty.current {
+  color: #D6524D;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__accordion.ui.accordion .title.empty.current .icon.left {
+  color: #6EA4A6;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__accordion.ui.accordion .content {
+  background-color: #161726;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__accordion.ui.accordion .content .ui.list .item {
+  color: #8f968c;
+  padding-left: 3.7em;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__accordion.ui.accordion .content .ui.list .item:hover {
+  color: #d0d3cf;
+  background-color: #161726;
+}
+
+[data-theme="galaxy"] .sidebar .sidebar__accordion.ui.accordion .content .ui.list .item.active {
+  background-color: #161726;
+  font-weight: normal;
+  color: #D6524D;
+}
+
 [data-theme="purple"] {
   background: #f3f5f9;
 }
