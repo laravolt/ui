@@ -8,6 +8,9 @@ return [
     'themes'    => [
         'dark-blue' => [
             'topbar_inverted'   => true,
+        ],
+        'teal' => [
+            // 'topbar_inverted'   => true,
         ]
     ],
 ];

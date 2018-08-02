@@ -1102,3 +1102,82 @@ table.ui.table tbody td.numbering {
   font-weight: normal;
   color: #e9b92a;
 }
+
+[data-theme="teal"] {
+  background: #ededed42;
+}
+
+[data-theme="teal"] .sidebar .sidebar__wrapper {
+  border-right: 0 none;
+  background-color: #335875;
+}
+
+[data-theme="teal"] .sidebar .sidebar__wrapper .ui.header.brand {
+  background-color: #335875;
+  color: #ffc000;
+  overflow: hidden;
+  height: 63px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+[data-theme="teal"] .sidebar .sidebar__wrapper .ui.menu.vertical {
+  background: transparent;
+}
+
+[data-theme="teal"] .sidebar .sidebar__wrapper .ui.menu.vertical i.angle.icon {
+  color: #1bd9bf;
+}
+
+[data-theme="teal"] .sidebar .sidebar__wrapper .ui.menu.vertical .item {
+  color: #87b9d6;
+}
+
+[data-theme="teal"] .sidebar .sidebar__wrapper .ui.menu.vertical .item > .header {
+  color: #1bd9bf;
+  font-size: .9em;
+}
+
+[data-theme="teal"] .sidebar .sidebar__menu .brand {
+  color: #87b9d6;
+}
+
+[data-theme="teal"] .sidebar .sidebar__accordion.ui.accordion .title {
+  color: #87b9d6;
+  text-transform: uppercase;
+  font-size: .9em;
+  font-weight: 700;
+}
+
+[data-theme="teal"] .sidebar .sidebar__accordion.ui.accordion .title.active {
+  background: #2b4b63;
+}
+
+[data-theme="teal"] .sidebar .sidebar__accordion.ui.accordion .title.active.empty {
+  border-left: 5px solid #ffc000;
+  padding-left: calc(1.5rem - 5px);
+}
+
+[data-theme="teal"] .sidebar .sidebar__accordion.ui.accordion .title:hover {
+  background: #2b4b63;
+}
+
+[data-theme="teal"] .sidebar .sidebar__accordion.ui.accordion .content {
+  background-color: #2b4b63;
+}
+
+[data-theme="teal"] .sidebar .sidebar__accordion.ui.accordion .content .ui.list .item {
+  color: #61a3c9;
+  padding-left: 3.5rem;
+}
+
+[data-theme="teal"] .sidebar .sidebar__accordion.ui.accordion .content .ui.list .item.active {
+  background: #2b4b63;
+  font-weight: normal;
+  border-left: 5px solid #ffc000;
+  padding-left: calc(3.5rem - 5px);
+}
+
+[data-theme="teal"] .sidebar .sidebar__accordion.ui.accordion .content .ui.list .item:hover {
+  background: #27445a;
+}
