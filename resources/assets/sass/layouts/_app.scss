@@ -5,6 +5,14 @@ $sidebar-width-wide: 300px;
 $header-height: 60px;
 $header-width: calc(100% - #{$sidebar-width-normal} + 2px);
 
+body.auth {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background: url('../img/bg/dark.jpg');
+}
+
 .layout--app {
 
   display: flex;

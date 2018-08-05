@@ -12,9 +12,7 @@ $items = app('laravolt.menu')->roots()->filter(function($item){
 
         <div class="sidebar__menu">
             <h1 class="ui header brand">
-                @if(strlen(config('laravolt.ui.brand_image')) > 0)
-                <img src="{{ config('laravolt.ui.brand_image') }}" alt="" class="ui image small">
-                @endif
+                @include('ui::components.brand-image')
                 {{ config('laravolt.ui.brand_name') }}
             </h1>
             <div class="ui attached vertical menu fluid">

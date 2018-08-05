@@ -741,6 +741,14 @@ table.ui.table tbody td.numbering {
   background: #f9fafb;
 }
 
+body.auth {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background: url("../img/bg/dark.jpg");
+}
+
 .layout--app {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -28,3 +28,5 @@ mix.styles([
     './node_modules/simplebar/dist/simplebar.css',
     './public/css/app.css',
 ], 'public/css/all.css');
+
+mix.copyDirectory('resources/assets/img', 'public/img');
