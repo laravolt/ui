@@ -1,7 +1,15 @@
 <div class="ui accordion sidebar__accordion" data-role="sidebar-accordion">
     @foreach($items as $item)
 
+        @php($validChildren = 0)
+        @foreach($item->children() as $submenu)
+            @if(auth()->user()->can($submenu->data('permission')))
+                @php($validChildren++)
+            @endif
+        @endforeach
+
         @if($item->hasChildren())
+            @if($validChildren > 0)
             <div class="title {{ Laravolt\Ui\Menu::setActiveParent($item->children(), $item->link->isActive) }}">
                 <i class="left icon {{ $item->data('icon') }}"></i>
                 {{ $item->title }}
@@ -9,13 +17,16 @@
             </div>
             <div class="content {{ Laravolt\Ui\Menu::setActiveParent($item->children(), $item->link->isActive) }} ">
                 @if($item->hasChildren())
-                    <div class="ui list {{ $loop->last ? 'last':'' }} {{ Laravolt\Ui\Menu::setVisible($item->children()) }} ">
+                    <div class="ui list">
                         @foreach($item->children() as $child)
+                            @if(auth()->user()->can($child->data('permission')))
                             <a href="{{ $child->url() }}" class="item {{ ($child->link->isActive)?'active':'' }} ">{{ $child->title }}</a>
+                            @endif
                         @endforeach
                     </div>
                 @endif
             </div>
+            @endif
         @elseif(auth()->user()->can($item->data('permission')))
             <a class="title empty {{ Laravolt\Ui\Menu::setActiveParent($item->children(), $item->link->isActive) }}" href="{{ $item->url() }}">
                 <i class="left icon {{ $item->data('icon') }}"></i>

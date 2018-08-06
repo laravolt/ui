@@ -11,10 +11,7 @@ $items = app('laravolt.menu')->roots()->filter(function($item){
     <div class="sidebar__wrapper" data-role="sidebar">
 
         <div class="sidebar__menu">
-            <h2 class="ui header brand centered m-t-1">
-                @include('ui::components.brand-image')
-                {{ config('laravolt.ui.brand_name') }}
-            </h2>
+            @include('ui::menu.sidebar_brand')
             <div class="ui attached vertical menu fluid">
                 @if(!$items->isEmpty())
                     @foreach($items as $item)

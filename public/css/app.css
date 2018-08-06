@@ -816,6 +816,11 @@ body.auth {
 .layout--app .sidebar__menu .brand {
   text-transform: uppercase;
   font-weight: 400;
+  height: 63px;
+  line-height: 63px;
+  overflow: hidden;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .layout--app .sidebar__menu .ui.menu {
@@ -980,6 +985,7 @@ body.auth {
   color: #fff;
   overflow: hidden;
   height: 63px;
+  line-height: 63px;
   font-size: 1.75rem;
   text-align: center;
 }
