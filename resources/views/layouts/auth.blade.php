@@ -4,7 +4,7 @@
     <div class="ui grid stackable">
         <div class="six wide column centered">
             <div class="ui segments center aligned raised">
-                <div class="ui segment center aligned very padded secondary">
+                <div class="ui segment center aligned very padded">
 
                     <h2 class="ui header" style="text-transform: uppercase; font-weight: 400">
                         @include('ui::components.brand-image', ['class' => 'mini centered'])
