@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     @stack('meta')
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('laravolt/semantic/semantic.min.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('laravolt/css/all.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ mix('semantic/semantic.min.css', 'laravolt') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ mix('css/all.css', 'laravolt') }}"/>
     @stack('style')
     @stack('head')
 
@@ -19,7 +19,7 @@
 
 @yield('body')
 
-<script type="text/javascript" src="{{ asset('laravolt/js/all.js') }}"></script>
+<script type="text/javascript" src="{{ mix('js/all.js', 'laravolt') }}"></script>
 @stack('script')
 @stack('body')
 

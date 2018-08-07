@@ -10,6 +10,7 @@ let mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+mix.setPublicPath('public')
 
 mix.scripts([
     './node_modules/jquery/dist/jquery.min.js',
@@ -30,3 +31,5 @@ mix.styles([
 ], 'public/css/all.css');
 
 mix.copyDirectory('resources/assets/img', 'public/img');
+
+mix.version(['./public/semantic/semantic.min.css', './public/css/all.css', './public/js/all.js']);
