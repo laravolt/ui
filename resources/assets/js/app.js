@@ -10,7 +10,8 @@ $(function () {
     $('.ui.checkbox').checkbox();
 
     $('.ui.dropdown:not(.tag)').dropdown({
-        forceSelection: false
+        forceSelection: false,
+        fullTextSearch: 'exact'
     });
 
     $('.ui.dropdown.tag').each(function () {
