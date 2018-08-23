@@ -1,6 +1,10 @@
 $(function () {
 
-    new SimpleBar($('[data-role="sidebar"]')[0])
+    var sidebar = $('[data-role="sidebar"]');
+    if (sidebar.length > 0) {
+        new SimpleBar(sidebar[0]);
+    }
+
     $('[data-role="sidebar-accordion"]').accordion({
         selector: {
             trigger: '.title:not(.empty)'
