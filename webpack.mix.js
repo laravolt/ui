@@ -16,11 +16,11 @@ mix.scripts([
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/semantic-ui/dist/semantic.min.js',
     './node_modules/simplebar/dist/simplebar.js',
-    'resources/assets/js/components/flash.js',
-    'resources/assets/js/app.js'
+    'resources/js/components/flash.js',
+    'resources/js/app.js'
 ], 'public/js/all.js');
 
-mix.sass('resources/assets/sass/app.scss', 'public/css')
+mix.sass('resources/sass/app.scss', 'public/css')
     .options({
         processCssUrls: false
     });
@@ -30,6 +30,6 @@ mix.styles([
     './public/css/app.css',
 ], 'public/css/all.css');
 
-mix.copyDirectory('resources/assets/img', 'public/img');
+mix.copyDirectory('resources/img', 'public/img');
 
 mix.version(['./public/semantic/semantic.min.css', './public/css/all.css', './public/js/all.js']);
