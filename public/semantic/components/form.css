@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.3.2 - Form
+ * # Semantic UI 2.4.1 - Form
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -317,7 +317,7 @@
   color: #a8b1b8;
 }
 .ui.form :-ms-input-placeholder {
-  color: #a8b1b8;
+  color: #a8b1b8 !important;
 }
 .ui.form ::-moz-placeholder {
   color: #a8b1b8;
@@ -326,7 +326,7 @@
   color: #707f89;
 }
 .ui.form :focus:-ms-input-placeholder {
-  color: #707f89;
+  color: #707f89 !important;
 }
 .ui.form :focus::-moz-placeholder {
   color: #707f89;
