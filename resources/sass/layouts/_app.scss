@@ -44,15 +44,15 @@ body.auth {
     &.thin {width: $sidebar-width-thin}
     &.wide {width: $sidebar-width-wide}
 
-    &.show {
-      position: absolute;
-      left: 0;
-    }
-
     /* Tablet and below */
     @media only screen and (max-width: 991px) {
       position: absolute;
       left: 0 - $sidebar-width-normal;
+
+      &.show {
+        left: 0;
+      }
+
     }
 
   }
