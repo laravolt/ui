@@ -3,6 +3,14 @@ $(function () {
     var sidebar = $('[data-role="sidebar"]');
     if (sidebar.length > 0) {
         new SimpleBar(sidebar[0]);
+
+        var sidebarVisibilitySwitcher = $('[data-role="sidebar-visibility-switcher"]');
+        if (sidebarVisibilitySwitcher.length > 0) {
+            sidebarVisibilitySwitcher.on('click', function(){
+                sidebar.parent().toggleClass('show');
+            });
+        }
+
     }
 
     $('[data-role="sidebar-accordion"]').accordion({

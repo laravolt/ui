@@ -1,5 +1,5 @@
 <header class="ui menu small borderless fixed top {{ config('laravolt.ui.options.topbar_inverted') ? 'inverted': '' }}">
-    {{--<div class="item"><h3 class="ui header">Page Header</h3></div>--}}
+    <div class="item mobile only tablet only" data-role="sidebar-visibility-switcher"><i class="icon sidebar"></i></div>
     {{--<div class="item">--}}
         {{--<div class="ui breadcrumb">--}}
             {{--<a class="section">Home</a>--}}

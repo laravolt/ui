@@ -6,8 +6,7 @@ $items = app('laravolt.menu')->roots()->filter(function($item){
 });
 
 ?>
-
-<div class="sidebar">
+<nav class="sidebar">
     <div class="sidebar__wrapper" data-role="sidebar">
 
         <div class="sidebar__menu">
@@ -54,4 +53,4 @@ $items = app('laravolt.menu')->roots()->filter(function($item){
             </div>
         </div>
     </div>
-</div>
+</nav>

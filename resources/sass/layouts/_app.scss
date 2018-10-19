@@ -24,17 +24,37 @@ body.auth {
     left: $sidebar-width-normal;
     width: $header-width;
     max-width: $header-width;
+
+    /* Tablet and below */
+    @media only screen and (max-width: 991px) {
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
-  .sidebar {
+  nav.sidebar {
     position: relative;
     z-index: 1;
     flex: 0 0 auto;
     -webkit-box-flex: 0;
     width: $sidebar-width-normal;
+    transition: .5s all;
 
     &.thin {width: $sidebar-width-thin}
     &.wide {width: $sidebar-width-wide}
+
+    &.show {
+      position: absolute;
+      left: 0;
+    }
+
+    /* Tablet and below */
+    @media only screen and (max-width: 991px) {
+      position: absolute;
+      left: 0 - $sidebar-width-normal;
+    }
+
   }
 
   .sidebar__wrapper {
