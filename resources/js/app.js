@@ -11,6 +11,13 @@ $(function () {
             });
         }
 
+        $(document).click(function(event) {
+            if ($('nav.sidebar').hasClass('show')) {
+                if(!$(event.target).closest('nav.sidebar').length && !$(event.target).closest('[data-role="sidebar-visibility-switcher"]').length) {
+                    $('nav.sidebar').removeClass('show');
+                }
+            }
+        });
     }
 
     $('[data-role="sidebar-accordion"]').accordion({
