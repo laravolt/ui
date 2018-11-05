@@ -14,7 +14,9 @@ $items = app('laravolt.menu')->roots()->filter(function($item){
             <div class="ui attached vertical menu fluid">
                 @if(!$items->isEmpty())
                     @foreach($items as $item)
-
+                        @if (! auth()->user()->can($item->data('permission')))
+                            @continue
+                        @endif
                         {{--check if current menu opened--}}
                         @php
                             $opened = false;
