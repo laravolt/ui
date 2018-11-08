@@ -15,8 +15,8 @@ return [
                 // Sub Menu 1-*
                 'menu' => [
                     'Sub Menu 1-1' => ['url' => '#'],
-                    'Sub Menu 1-2' => ['url' => '#'],
-                    'Sub Menu 1-3' => ['url' => '#'],
+                    'Sub Menu 1-2' => '#', // string value is pointing to url.
+                    'Sub Menu 1-3' => '#',
                     ]
                 ],
             // Menu 2

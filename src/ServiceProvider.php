@@ -121,37 +121,10 @@ class ServiceProvider extends BaseServiceProvider
             'laravolt.menu'
         );
 
-        $options = config('laravolt.menu');
-        foreach ($options as $title => $option) {
-            $section = $this->app['laravolt.menu']->add($title);
-            if (isset($option['menu'])) {
-                $this->addMenu($section, $option['menu']);
-            }
-            if (isset($option['data'])) {
-                $this->setData($section, $option['data']);
-            }
-        };
-    }
+        $this->app->singleton('laravolt.menu.builder', function (Application $app) {
+            return $app->make(MenuBuilder::class);
+        });
 
-    private function addMenu(&$parent, $menus)
-    {
-        foreach ($menus as $name => $option) {
-            if (! isset($option['menu'])) {
-                $menu = $parent->add($name, $option['url'] ?? route($option['route']));
-            } else {
-                $menu = $parent->add($name, '#');
-                $this->addMenu($menu, $option['menu']);
-            }
-            if (isset($option['data'])) {
-                $this->setData($menu, $option['data']);
-            }
-        }
-    }
-
-    private function setData(&$menu, $data)
-    {
-        foreach ($data as $key => $value) {
-            $menu->data($key, $value);
-        }
+        $this->app['laravolt.menu.builder']->loadArray(config('laravolt.menu'));
     }
 }
