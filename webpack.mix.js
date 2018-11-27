@@ -17,7 +17,11 @@ mix.scripts([
     './node_modules/semantic-ui/dist/semantic.min.js',
     './node_modules/simplebar/dist/simplebar.js',
     'resources/js/components/flash.js',
-    'resources/js/app.js'
+    'resources/js/components/keymaster.js',
+    'resources/js/components/fuse.min.js',
+    'resources/js/init/shortcut.js',
+    'resources/js/init/sidebar.js',
+    'resources/js/init/ui.js'
 ], 'public/js/all.js');
 
 mix.sass('resources/sass/app.scss', 'public/css')
