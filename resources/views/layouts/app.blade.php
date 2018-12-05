@@ -5,7 +5,6 @@
 
         @include('ui::menu.topbar')
         @include('ui::menu.sidebar')
-        @include('ui::menu.quick-switcher')
 
         <div class="content">
             <div class="content__inner">

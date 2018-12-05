@@ -16,12 +16,10 @@ $items = app('laravolt.menu')->roots()->filter(
         <div class="sidebar__menu">
             @include('ui::menu.sidebar_brand')
 
-            <div class="ui attached vertical menu fluid list" data-role="quick-menu">
-                @include('ui::components.searchbox')
-                <div class="items">
-
-                </div>
-            </div>
+            @if(config('laravolt.ui.quick_switcher'))
+                @include('ui::quick-switcher.sidebar')
+                @include('ui::quick-switcher.modal')
+            @endif
 
             <div class="ui attached vertical menu fluid list" data-role="original-menu">
                 @if(!$items->isEmpty())
