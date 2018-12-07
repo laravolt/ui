@@ -1,6 +1,6 @@
 <div class="ui tiny basic modal" data-role="quick-switcher">
     <div class="content">
-        <select class="fluid search" data-role="quick-switcher-dropdown">
+        <select class="fluid search ui big" data-role="quick-switcher-dropdown">
             <option value="">@lang('Type to find an action')</option>
         </select>
     </div>
@@ -12,7 +12,7 @@
             top: 10%;
         }
         [data-role="quick-switcher"] .ui.dropdown .menu>.item>.right.floated.label {
-            margin-top: -0.5em;
+            margin-top: -0.4em;
         }
     </style>
 @endpush
