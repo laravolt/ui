@@ -20,7 +20,7 @@
                     <div class="ui list">
                         @foreach($item->children() as $child)
                             @if(auth()->user()->can($child->data('permission')))
-                            <a href="{{ $child->url() }}" class="item {{ ($child->link->isActive)?'active':'' }} ">{{ $child->title }}</a>
+                            <a href="{{ $child->url() }}" data-parent="{{ $child->parent()->title }}" class="item {{ ($child->link->isActive)?'active':'' }} ">{{ $child->title }}</a>
                             @endif
                         @endforeach
                     </div>
@@ -28,7 +28,9 @@
             </div>
             @endif
         @elseif(auth()->user()->can($item->data('permission')))
-            <a class="title empty {{ Laravolt\Ui\Menu::setActiveParent($item->children(), $item->link->isActive) }}" href="{{ $item->url() }}">
+            <a class="title empty {{ Laravolt\Ui\Menu::setActiveParent($item->children(), $item->link->isActive) }}"
+               href="{{ $item->url() }}"
+               data-parent="{{ $item->parent()->title }}">
                 <i class="left icon {{ $item->data('icon') }}"></i>
                 {{ $item->title }}
             </a>

@@ -11,6 +11,9 @@
         [data-role="quick-switcher"] {
             top: 10%;
         }
+        [data-role="quick-switcher"] .ui.dropdown .menu>.item>.right.floated.label {
+            margin-top: -0.5em;
+        }
     </style>
 @endpush
 @push('script')
@@ -18,7 +21,13 @@
         $(function () {
             var quickSwitcherDropdown = $('[data-role="quick-switcher-dropdown"]');
             $('[data-role="original-menu"] a').each(function (index, elm) {
-                var option = $('<option>').attr('value', $(elm).attr('href')).html($(elm).html());
+                var parent = $(elm).data('parent');
+                var child = $(elm).html();
+                var label = child;
+                if (parent) {
+                    label += '<div class="ui mini label right floated">' + parent + '</div>';
+                }
+                var option = $('<option>').attr('value', $(elm).attr('href')).html(label);
                 quickSwitcherDropdown.append(option);
             });
 
