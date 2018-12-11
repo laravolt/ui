@@ -1,7 +1,7 @@
 $(function () {
 
     key('⌘+k, ctrl+k', function () {
-        var modal = $('[data-role="quick-switcher"]');
+        var modal = $('[data-role="quick-switcher-modal"]');
 
         modal.modal({
             onHide: function () {
