@@ -40,4 +40,26 @@ $(function () {
             }
         }
     });
+
+    var quickSwitcherDropdown = $('[data-role="quick-switcher-dropdown"]');
+    $('[data-role="original-menu"] a').each(function (index, elm) {
+        var parent = $(elm).data('parent');
+        var child = $(elm).html();
+        var label = child;
+        if (parent) {
+            label += '<div class="ui mini label right floated">' + parent + '</div>';
+        }
+        var option = $('<option>').attr('value', $(elm).attr('href')).html(label);
+        quickSwitcherDropdown.append(option);
+    });
+
+    quickSwitcherDropdown.dropdown({
+        fullTextSearch: true,
+        forceSelection: false,
+        selectOnKeydown: false,
+        match: 'text',
+        action: function (text, value) {
+            window.location.href = value;
+        }
+    });
 });

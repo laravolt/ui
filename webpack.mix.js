@@ -19,9 +19,10 @@ mix.scripts([
     'resources/js/components/flash.js',
     'resources/js/components/keymaster.js',
     'resources/js/components/fuse.min.js',
-    'resources/js/init/shortcut.js',
     'resources/js/init/sidebar.js',
-    'resources/js/init/ui.js'
+    'resources/js/init/ui.js',
+    // Somehow, quick-switcher.js must be initialized last, after all other UI elements. Don't know why :(
+    'resources/js/init/quick-switcher.js'
 ], 'public/js/all.js');
 
 mix.sass('resources/sass/app.scss', 'public/css')
