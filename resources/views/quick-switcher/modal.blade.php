@@ -6,16 +6,6 @@
     </div>
 </div>
 
-@push('style')
-    <style>
-        [data-role="quick-switcher"] {
-            top: 10%;
-        }
-        [data-role="quick-switcher"] .ui.dropdown .menu>.item>.right.floated.label {
-            margin-top: -0.4em;
-        }
-    </style>
-@endpush
 @push('script')
     <script>
         $(function () {
