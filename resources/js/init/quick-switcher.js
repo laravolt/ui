@@ -33,11 +33,12 @@ $(function () {
             }
             var fuse = new Fuse(items, options)
             var result = fuse.search(keyword);
+            var matches = '';
             for (var i in result) {
                 var item = result[i];
-                var a = "<a class='item' href='" + item.url + "'>" + item.text + "</a>";
-                $('[data-role="quick-menu"] .items').append(a);
+                matches += "<a class='title' href='" + item.url + "'>" + item.text + "</a>";
             }
+            $('[data-role="quick-menu"] .items').append(matches);
         }
     });
 

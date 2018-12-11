@@ -21,7 +21,7 @@ $items = app('laravolt.menu')->roots()->filter(
                 @include('ui::quick-switcher.modal')
             @endif
 
-            <div class="ui attached vertical menu fluid list" data-role="original-menu">
+            <div class="ui attached vertical menu fluid" data-role="original-menu">
                 @if(!$items->isEmpty())
 
                     @foreach($items as $item)
