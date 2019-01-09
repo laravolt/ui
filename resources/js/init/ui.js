@@ -9,7 +9,7 @@ $(function () {
 
     $('.ui.dropdown.tag').each(function () {
 
-        var selected = $(this).data('value').split(',');
+        var selected = $(this).data('value').toString().split(',');
         if (selected.length == 1 && selected[0] == '') {
             selected = false;
         }
