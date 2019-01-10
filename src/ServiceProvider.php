@@ -3,6 +3,7 @@
 namespace Laravolt\Ui;
 
 use Illuminate\Foundation\Application;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Lavary\Menu\Builder;
 
@@ -68,6 +69,8 @@ class ServiceProvider extends BaseServiceProvider
 
         $this->registerFlash();
 
+        $this->overridePaginationView();
+
         if (!$this->app->runningInConsole()) {
             $this->app['router']->pushMiddlewareToGroup('web', FlashMiddleware::class);
         }
@@ -125,5 +128,11 @@ class ServiceProvider extends BaseServiceProvider
         });
 
         $this->app['laravolt.menu.builder']->loadArray(config('laravolt.menu'));
+    }
+
+    protected function overridePaginationView()
+    {
+        Paginator::defaultView('ui::pagination.default');
+        Paginator::defaultSimpleView('ui::pagination.simple');
     }
 }
