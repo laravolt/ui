@@ -3,7 +3,6 @@
 namespace Laravolt\Ui;
 
 use Illuminate\Foundation\Application;
-use Illuminate\Foundation\Http\Kernel;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Lavary\Menu\Builder;
 
