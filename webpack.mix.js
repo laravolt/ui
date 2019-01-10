@@ -16,6 +16,7 @@ mix.scripts([
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/semantic-ui/dist/semantic.min.js',
     './node_modules/simplebar/dist/simplebar.js',
+    'resources/js/components/calendar.js',
     'resources/js/components/flash.js',
     'resources/js/components/keymaster.js',
     'resources/js/components/fuse.min.js',
