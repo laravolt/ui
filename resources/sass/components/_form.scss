@@ -1,4 +1,6 @@
 .ui.form {
+
+  // Hint label
   .field > .hint {
     flex-basis: 100%;
     margin-left: calc(180px + 1em);
@@ -6,9 +8,11 @@
     font-size: .9em;
   }
 
+  // Avoid double margin for nested field
   .field > .fields {
     margin-bottom: 0;
   }
+
 }
 
 @media (min-width: 767px) {
@@ -27,6 +31,11 @@
 
     .field > :nth-child(2) {
       flex: 2;
+    }
+
+    // Make asterisk "*" mark absolute, so all labels (required or not) will correctly align to right
+    .required.field > .checkbox:after, .required.field > label:after, .required.fields.grouped > label:after, .required.fields:not(.grouped) > .field > .checkbox:after, .required.fields:not(.grouped) > .field > label:after {
+      position: absolute;
     }
 
     .action {
