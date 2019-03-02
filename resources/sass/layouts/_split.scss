@@ -1,0 +1,22 @@
+.layout--split {
+  display: flex;
+  min-height: 100%;
+  @media only screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+    min-height: inherit;
+  }
+
+  .content__left {
+    flex: 1;
+  }
+
+  .content__right {
+    flex: 1;
+    display: flex;
+    &--inner {
+      flex: 1;
+      margin: auto !important;
+      max-width: 500px;
+    }
+  }
+}

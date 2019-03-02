@@ -35,11 +35,6 @@ class ServiceProvider extends BaseServiceProvider
                 );
             }
         );
-
-        // register command
-        $this->commands(AssetLinkCommand::class);
-
-        $this->registerMenu();
     }
 
     /**
@@ -74,6 +69,13 @@ class ServiceProvider extends BaseServiceProvider
         if (!$this->app->runningInConsole()) {
             $this->app['router']->pushMiddlewareToGroup('web', FlashMiddleware::class);
         }
+
+        // register command
+        $this->commands(AssetLinkCommand::class);
+
+        $this->registerMenu();
+
+        $this->registerAssets();
     }
 
     /**
@@ -134,5 +136,11 @@ class ServiceProvider extends BaseServiceProvider
     {
         Paginator::defaultView('ui::pagination.default');
         Paginator::defaultSimpleView('ui::pagination.simple');
+    }
+
+    protected function registerAssets()
+    {
+        $this->app->register(\Stolz\Assets\Laravel\ServiceProvider::class);
+        app('stolz.assets.group.laravolt')->add('vegas');
     }
 }
