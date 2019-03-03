@@ -112,6 +112,94 @@
   text-align: right !important;
 }
 
+.bg-white-0 {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.bg-black-0 {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.bg-white-10 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.bg-black-10 {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.bg-white-20 {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.bg-black-20 {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.bg-white-30 {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.bg-black-30 {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.bg-white-40 {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.bg-black-40 {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.bg-white-50 {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.bg-black-50 {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.bg-white-60 {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.bg-black-60 {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.bg-white-70 {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.bg-black-70 {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.bg-white-80 {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.bg-black-80 {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.bg-white-90 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.bg-black-90 {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.bg-white-100 {
+  background-color: white !important;
+}
+
+.bg-black-100 {
+  background-color: black !important;
+}
+
 .b-0 {
   border: 0 none !important;
   box-shadow: none !important;
@@ -1212,9 +1300,29 @@ body.auth {
   font-weight: 700;
 }
 
+.layout--full {
+  display: flex;
+  margin: 0;
+  paddding: 0;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.layout--full[data-position=left] .content {
+  order: -1;
+}
+.layout--full[data-position=center] .content {
+  order: 0;
+}
+.layout--full[data-position=right] .content {
+  order: 1;
+}
+
 .layout--split {
   display: flex;
   min-height: 100%;
+  margin: 0;
+  paddding: 0;
 }
 @media only screen and (max-width: 767px) {
   .layout--split {
@@ -1222,14 +1330,17 @@ body.auth {
     min-height: inherit;
   }
 }
-.layout--split .content__left {
+.layout--split > div {
   flex: 1;
 }
-.layout--split .content__right {
-  flex: 1;
+.layout--split[data-position=right] .content {
+  order: 1;
+}
+.layout--split .content {
   display: flex;
+  background-color: #F2F2F2;
 }
-.layout--split .content__right--inner {
+.layout--split .content--inner {
   flex: 1;
   margin: auto !important;
   max-width: 500px;
