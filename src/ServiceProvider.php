@@ -141,6 +141,8 @@ class ServiceProvider extends BaseServiceProvider
     protected function registerAssets()
     {
         $this->app->register(\Stolz\Assets\Laravel\ServiceProvider::class);
-        app('stolz.assets.group.laravolt')->add('vegas');
+        if ($this->app->bound('stolz.assets.group.laravolt')) {
+            app('stolz.assets.group.laravolt')->add('vegas');
+        }
     }
 }
