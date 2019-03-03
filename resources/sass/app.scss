@@ -1,4 +1,5 @@
 @import "helpers/allignment";
+@import "helpers/backgrounds";
 @import "helpers/border";
 @import "helpers/spacing";
 @import "helpers/text";
@@ -14,6 +15,7 @@
 @import "components/table";
 
 @import "layouts/app";
+@import "layouts/full";
 @import "layouts/split";
 
 @import "themes/light";

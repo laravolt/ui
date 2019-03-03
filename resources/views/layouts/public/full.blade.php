@@ -1,11 +1,12 @@
 @extends('ui::layouts.base')
 @section('body')
 
-    <div class="layout--split" data-position="left">
+    <div class="layout--full" data-position="center">
+        <div class="tablet or lower hidden"></div>
         <div class="content">
-            <div class="content--inner ui segment tall stacked center aligned p-2">
+            <div class="ui segment tall stacked center aligned p-2 bg-white-90">
                 @include('ui::components.brand-image', ['class' => 'tiny centered'])
-                <h2 class="ui header" style="font-weight: 400">
+                <h2 class="ui header">
                     {{ config('app.name') }}
                     <div class="sub header">{{ config('app.description') }}</div>
                 </h2>
@@ -15,15 +16,13 @@
                 @yield('content')
             </div>
         </div>
-        <div class="tablet or lower hidden" bg-slideshow>
-
-        </div>
+        <div class="tablet or lower hidden"></div>
     </div>
 @endsection
 
 @push('script')
     <script>
-        $("[bg-slideshow]").vegas({
+        $("body").vegas({
             delay: 10000,
             firstTransitionDuration: 1000,
             transitionDuration: 5000,
