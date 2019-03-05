@@ -27,7 +27,7 @@ $widths: (
     }
   }
   // Hint label
-  .field > .hint {
+  .hint {
     opacity: .7;
     font-size: .9em;
   }
@@ -81,6 +81,25 @@ $widths: (
       }
     }
 
+    > .grouped.fields {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 100% !important;
+      align-items: center;
+
+      label {
+        flex: 0 0 $labelWidth;
+        text-align: right;
+        margin-right: $labelMargin;
+        margin-bottom: 0;
+      }
+
+      > .hint {
+        flex-basis: 100%;
+        margin-left: calc(#{$labelWidth} + #{$labelMargin});
+      }
+    }
     // Make asterisk "*" mark absolute, so all labels (required or not) will correctly align to right
     > .required.field > .checkbox:after, .required.field > label:after {
       position: absolute;
