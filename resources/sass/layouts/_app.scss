@@ -150,13 +150,18 @@ body.auth {
 .sidebar__accordion.ui.accordion {
 
   .title {
-    display: block;
+    display: flex;
     padding: 0.75rem 1.5rem;
 
+    span {
+      flex-grow: 1;
+    }
     .icon.angle {
       transition: .5s all;
       width: auto;
       height: auto;
+      align-self: flex-start;
+      flex-grow: 0;
     }
     &.active {
       .icon.angle.down {

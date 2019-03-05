@@ -56,7 +56,7 @@ $items = app('laravolt.menu')->roots()->filter(
                                 <a class="title empty {{ Laravolt\Ui\Menu::setActiveParent($item->children(), $item->link->isActive) }}"
                                    href="{{ $item->url() }}">
                                     <i class="left icon {{ $item->data('icon') }}"></i>
-                                    {{ $item->title }}
+                                    <span>{{ $item->title }}</span>
                                 </a>
                                 <div class="content"></div>
                             </div>

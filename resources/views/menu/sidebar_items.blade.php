@@ -12,7 +12,7 @@
             @if($validChildren > 0)
             <div class="title {{ Laravolt\Ui\Menu::setActiveParent($item->children(), $item->link->isActive) }}">
                 <i class="left icon {{ $item->data('icon') }}"></i>
-                {{ $item->title }}
+                <span>{{ $item->title }}</span>
                 <i class="angle down icon"></i>
             </div>
             <div class="content {{ Laravolt\Ui\Menu::setActiveParent($item->children(), $item->link->isActive) }} ">
@@ -32,7 +32,7 @@
                href="{{ $item->url() }}"
                data-parent="{{ $item->parent()->title }}">
                 <i class="left icon {{ $item->data('icon') }}"></i>
-                {{ $item->title }}
+                <span>{{ $item->title }}</span>
             </a>
             <div class="content"></div>
         @endif
