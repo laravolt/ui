@@ -45,10 +45,15 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function boot()
     {
+        $this->loadTranslationsFrom(realpath(__DIR__.'/../resources/lang'), 'ui');
+
+        $this->app['laravolt.menu']->add('System');
+
         $this->mergeConfigFrom(
             $this->packagePath('config/config.php'),
             'laravolt.ui'
         );
+
         $this->publishes(
             [
                 $this->packagePath('config/config.php') => config_path('laravolt/ui.php'),
@@ -72,6 +77,10 @@ class ServiceProvider extends BaseServiceProvider
 
         // register command
         $this->commands(AssetLinkCommand::class);
+
+        if (config('laravolt.ui.route.enable')) {
+            $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        }
 
         $this->registerMenu();
 
@@ -120,6 +129,15 @@ class ServiceProvider extends BaseServiceProvider
 
     protected function registerMenu()
     {
+        if (config('laravolt.ui.menu.enable')) {
+            $menu = app('laravolt.menu')->system;
+
+            $menu->add(trans('ui::menu.appearance'), route('ui::appearance.edit'))
+                ->data('icon', 'paint brush')
+                // ->data('permission', '')
+                ->active(config('laravolt.ui.route.prefix').'/appearance/*');
+        }
+
         $this->mergeConfigFrom(
             $this->packagePath('config/menu.php'),
             'laravolt.menu'
