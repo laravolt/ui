@@ -35,6 +35,10 @@ class ServiceProvider extends BaseServiceProvider
                 );
             }
         );
+
+        // We add default menu in register() method,
+        // to make sure it is always accessible by other providers.
+        $this->app['laravolt.menu']->add('System');
     }
 
     /**
