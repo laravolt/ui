@@ -15,4 +15,10 @@ table.ui.table {
     text-align: center;
     background: #f9fafb;
   }
+  &.scrolling {
+    overflow-x: auto;
+    width: fit-content;
+    max-width: 100%;
+    display: block;
+  }
 }

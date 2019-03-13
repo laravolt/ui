@@ -133,9 +133,10 @@ body.auth {
     }
   }
 
-  .content {
+  > .content {
     -webkit-box-flex: 1;
     flex: 1 1 auto;
+    width: calc(100vw - #{$sidebar-width-normal});
 
     .content__inner {
       min-height: 800px;
