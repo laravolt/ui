@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.4.1 - Accordion
+ * # Semantic UI 2.7.2 - Accordion
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -11,6 +11,10 @@
 ;(function ($, window, document, undefined) {
 
 'use strict';
+
+$.isFunction = $.isFunction || function(obj) {
+  return typeof obj === "function" && typeof obj.nodeType !== "number";
+};
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -185,12 +189,13 @@ $.fn.accordion = function(parameters) {
               $activeContent
                 .children()
                   .transition({
-                    animation   : 'fade in',
-                    queue       : false,
-                    useFailSafe : true,
-                    debug       : settings.debug,
-                    verbose     : settings.verbose,
-                    duration    : settings.duration
+                    animation        : 'fade in',
+                    queue            : false,
+                    useFailSafe      : true,
+                    debug            : settings.debug,
+                    verbose          : settings.verbose,
+                    duration         : settings.duration,
+                    skipInlineHidden : true
                   })
               ;
             }
@@ -246,12 +251,13 @@ $.fn.accordion = function(parameters) {
                 $activeContent
                   .children()
                     .transition({
-                      animation   : 'fade out',
-                      queue       : false,
-                      useFailSafe : true,
-                      debug       : settings.debug,
-                      verbose     : settings.verbose,
-                      duration    : settings.duration
+                      animation        : 'fade out',
+                      queue            : false,
+                      useFailSafe      : true,
+                      debug            : settings.debug,
+                      verbose          : settings.verbose,
+                      duration         : settings.duration,
+                      skipInlineHidden : true
                     })
                 ;
               }
@@ -316,11 +322,12 @@ $.fn.accordion = function(parameters) {
                 $openContents
                   .children()
                     .transition({
-                      animation   : 'fade out',
-                      useFailSafe : true,
-                      debug       : settings.debug,
-                      verbose     : settings.verbose,
-                      duration    : settings.duration
+                      animation        : 'fade out',
+                      useFailSafe      : true,
+                      debug            : settings.debug,
+                      verbose          : settings.verbose,
+                      duration         : settings.duration,
+                      skipInlineHidden : true
                     })
                 ;
               }
@@ -522,7 +529,7 @@ $.fn.accordion = function(parameters) {
           else if(found !== undefined) {
             response = found;
           }
-          if($.isArray(returnedValue)) {
+          if(Array.isArray(returnedValue)) {
             returnedValue.push(response);
           }
           else if(returnedValue !== undefined) {

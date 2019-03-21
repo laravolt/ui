@@ -11,11 +11,11 @@
     },
     "devDependencies": {
         "cross-env": "^5.2.0",
+        "fomantic-ui": "^2.7.2",
         "jquery": "^3.3.1",
         "laravel-mix": "^4.0.14",
         "sass": "^1.16.1",
         "sass-loader": "7.*",
-        "semantic-ui": "^2.4.1",
         "simplebar": "3.0.0-beta.0"
     }
 }
