@@ -25,7 +25,7 @@ Laravolt\Ui\ServiceProvider::class,
 ## SIDEBAR MENU
 
 publish configuration file
-`php artisan vendor:publish --provider=Laravolt\Ui\ServiceProvider --tag=config`
+`php artisan vendor:publish --provider='Laravolt\Ui\ServiceProvider'`
 there will be file `config/laravolt/menu.php` and example menu inside it.
 ```php
 /**
