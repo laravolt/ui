@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="{{ mix('css/all.css', 'laravolt') }}"/>
     @stack('style')
     @stack('head')
-    {!! Assets::group('laravolt')->css() !!}
     {!! Assets::css() !!}
 </head>
 
@@ -21,7 +20,6 @@
 @yield('body')
 
 <script type="text/javascript" src="{{ mix('js/all.js', 'laravolt') }}"></script>
-{!! Assets::group('laravolt')->js() !!}
 {!! Assets::js() !!}
 @stack('script')
 @stack('body')
