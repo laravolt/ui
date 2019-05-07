@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.7.2 - Input
+ * # Semantic UI 2.7.4 - Input
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -512,6 +512,9 @@
 
 .ui.mini.input {
   font-size: 0.76923077em;
+}
+.ui.tiny.input {
+  font-size: 0.84615385em;
 }
 .ui.small.input {
   font-size: 0.92307692em;

@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.7.2 - Site
+ * # Semantic UI 2.7.4 - Site
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -30,7 +30,6 @@ $.site = $.fn.site = function(parameters) {
     namespace       = settings.namespace,
     error           = settings.error,
 
-    eventNamespace  = '.' + namespace,
     moduleNamespace = 'module-' + namespace,
 
     $document       = $(document),

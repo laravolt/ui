@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.7.2 - Accordion
+ * # Semantic UI 2.7.4 - Accordion
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -33,12 +33,6 @@ $.fn.accordion = function(parameters) {
     query           = arguments[0],
     methodInvoked   = (typeof query == 'string'),
     queryArguments  = [].slice.call(arguments, 1),
-
-    requestAnimationFrame = window.requestAnimationFrame
-      || window.mozRequestAnimationFrame
-      || window.webkitRequestAnimationFrame
-      || window.msRequestAnimationFrame
-      || function(callback) { setTimeout(callback, 0); },
 
     returnedValue
   ;

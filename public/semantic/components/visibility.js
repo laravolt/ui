@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.7.2 - Visibility
+ * # Semantic UI 2.7.4 - Visibility
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -62,7 +62,6 @@ $.fn.visibility = function(parameters) {
 
         $placeholder,
 
-        selector        = $module.selector || '',
         instance        = $module.data(moduleNamespace),
 
         requestAnimationFrame = window.requestAnimationFrame
@@ -510,8 +509,7 @@ $.fn.visibility = function(parameters) {
 
         passed: function(amount, newCallback) {
           var
-            calculations   = module.get.elementCalculations(),
-            amountInPixels
+            calculations   = module.get.elementCalculations()
           ;
           // assign callback
           if(amount && newCallback) {

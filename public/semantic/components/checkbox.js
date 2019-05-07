@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.7.2 - Checkbox
+ * # Semantic UI 2.7.4 - Checkbox
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -174,6 +174,13 @@ $.fn.checkbox = function(parameters) {
           }
         },
 
+        preventDefaultOnInputTarget: function() {
+          if(typeof event !== 'undefined' && $(event.target).is(selector.input)) {
+            module.verbose('Preventing default check action after manual check action');
+            event.preventDefault();
+          }
+        },
+
         event: {
           change: function(event) {
             if( !module.should.ignoreCallbacks() ) {
@@ -263,6 +270,7 @@ $.fn.checkbox = function(parameters) {
             settings.onChecked.call(input);
             module.trigger.change();
           }
+          module.preventDefaultOnInputTarget();
         },
 
         uncheck: function() {
@@ -275,6 +283,7 @@ $.fn.checkbox = function(parameters) {
             settings.onUnchecked.call(input);
             module.trigger.change();
           }
+          module.preventDefaultOnInputTarget();
         },
 
         indeterminate: function() {

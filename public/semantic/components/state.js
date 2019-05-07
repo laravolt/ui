@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.7.2 - State
+ * # Semantic UI 2.7.4 - State
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -29,7 +29,6 @@ $.fn.state = function(parameters) {
 
     moduleSelector  = $allModules.selector || '',
 
-    hasTouch        = ('ontouchstart' in document.documentElement),
     time            = new Date().getTime(),
     performance     = [],
 

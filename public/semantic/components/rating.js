@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.7.2 - Rating
+ * # Semantic UI 2.7.4 - Rating
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -47,7 +47,6 @@ $.fn.rating = function(parameters) {
         className       = settings.className,
         metadata        = settings.metadata,
         selector        = settings.selector,
-        error           = settings.error,
 
         eventNamespace  = '.' + namespace,
         moduleNamespace = 'module-' + namespace,
