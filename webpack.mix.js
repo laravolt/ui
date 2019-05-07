@@ -14,7 +14,7 @@ mix.setPublicPath('public')
 
 mix.scripts([
     './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/semantic-ui/dist/semantic.min.js',
+    './public/semantic/semantic.min.js',
     './node_modules/simplebar/dist/simplebar.js',
     'resources/js/components/calendar.js',
     'resources/js/components/flash.js',
@@ -38,4 +38,8 @@ mix.styles([
 
 mix.copyDirectory('resources/img', 'public/img');
 
-mix.version(['./public/semantic/semantic.min.css', './public/css/all.css', './public/js/all.js']);
+mix.version([
+    './public/semantic/semantic.min.css',
+    './public/css/all.css',
+    './public/js/all.js'
+]);
