@@ -22,3 +22,14 @@ table.ui.table {
     display: block;
   }
 }
+
+//Hide pagination number on mobile
+[data-role="suitable"] {
+  [data-role="pagination"] {
+    .item.dots, .item.number {
+      @media only screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+}
