@@ -6,6 +6,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Lavary\Menu\Builder;
+use Stolz\Assets\Manager;
 
 /**
  * Class PackageServiceProvider
@@ -39,6 +40,8 @@ class ServiceProvider extends BaseServiceProvider
         // We add default menu in register() method,
         // to make sure it is always accessible by other providers.
         $this->app['laravolt.menu']->add('System');
+
+        $this->registerAssets();
     }
 
     /**
@@ -56,7 +59,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->publishes(
             [
                 $this->packagePath('config/config.php') => config_path('laravolt/ui.php'),
-                $this->packagePath('config/menu.php') => config_path('laravolt/menu.php'),
+                $this->packagePath('config/menu.php')   => config_path('laravolt/menu.php'),
             ]
         );
 
@@ -78,14 +81,12 @@ class ServiceProvider extends BaseServiceProvider
         $this->commands(AssetLinkCommand::class);
 
         $this->registerMenu();
-
-        $this->registerAssets();
     }
 
     /**
      * Loads a path relative to the package base directory
      *
-     * @param  string $path
+     * @param  string  $path
      * @return string
      */
     protected function packagePath($path = '')
@@ -102,11 +103,11 @@ class ServiceProvider extends BaseServiceProvider
     protected function registerViews()
     {
         // register views within the application with the set namespace
-        $this->loadViewsFrom(realpath(__DIR__ . '/../resources/views'), 'ui');
+        $this->loadViewsFrom(realpath(__DIR__.'/../resources/views'), 'ui');
 
         // allow views to be published to the storage directory
         $this->publishes(
-            [realpath(__DIR__ . '/../resources/views') => base_path('resources/views/vendor/ui')],
+            [realpath(__DIR__.'/../resources/views') => base_path('resources/views/vendor/ui')],
             'views'
         );
     }
@@ -144,9 +145,16 @@ class ServiceProvider extends BaseServiceProvider
 
     protected function registerAssets()
     {
-        $this->app->register(\Stolz\Assets\Laravel\ServiceProvider::class);
-        if ($this->app->bound('stolz.assets.group.laravolt')) {
-            app('stolz.assets.group.laravolt')->add('vegas');
+        if (!$this->app->bound('stolz.assets.group.laravolt')) {
+            $this->app->singleton("stolz.assets.group.laravolt", function () {
+                return new Manager([
+                    'public_dir' => public_path('laravolt'),
+                    'css_dir'    => '',
+                    'js_dir'     => '',
+                ]);
+            });
         }
+
+        \Stolz\Assets\Laravel\Facade::group('laravolt')->registerCollection('vegas', ['laravolt/lib/vegas/vegas.min.css', 'laravolt/lib/vegas/vegas.min.js']);
     }
 }
