@@ -45,6 +45,10 @@
             {{ auth()->user()->name }}
             <i class="icon dropdown"></i>
             <div class="menu">
+                @if(Route::has('epicentrum::my.password.edit'))
+                <a href="{{ route('epicentrum::my.password.edit') }}" class="item">Edit Password</a>
+                @endif
+                <div class="divider"></div>
                 <a href="{{ route('auth::logout') }}" class="item">Logout</a>
             </div>
         </div>
