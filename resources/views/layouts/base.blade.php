@@ -21,9 +21,21 @@
 @yield('body')
 
 <script type="text/javascript" src="{{ mix('js/all.js', 'laravolt') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
 {!! Assets::group('laravolt')->js() !!}
 {!! Assets::js() !!}
 @stack('script')
 @stack('body')
+<script>
+  var pjax = new Pjax({
+    selectors: [
+      "title",
+      "meta[name=description]",
+      "header",
+      "nav.sidebar",
+      ".content",
+    ]
+  })
+</script>
 </body>
 </html>
