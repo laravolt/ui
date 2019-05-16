@@ -20,7 +20,14 @@
 
 @yield('body')
 
-<script type="text/javascript" src="{{ mix('js/all.js', 'laravolt') }}"></script>
+
+<script type="text/javascript" src="{{ mix('js/vendor.js', 'laravolt') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/swup@1.9.0/dist/swup.min.js"></script>
+<script type="text/javascript" src="{{ mix('js/init.js', 'laravolt') }}"></script>
+<script>
+  const swup = new Swup({cache: false});    // only this line when included with script tag
+</script>
+
 {!! Assets::group('laravolt')->js() !!}
 {!! Assets::js() !!}
 @stack('script')

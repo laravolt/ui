@@ -1224,7 +1224,7 @@ window.Messenger.Events = (function() {
             extraClasses: 'messenger-fixed messenger-on-bottom messenger-on-right',
             theme: 'future',
             maxMessages: 9,
-            parentLocations: ['body']
+            parentLocations: ['.layout--app']
         };
         opts = $.extend(defaultOpts, $._messengerDefaults, Messenger.options, opts);
         if (opts.theme != null) {
