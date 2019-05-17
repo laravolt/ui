@@ -1,6 +1,6 @@
 $(function () {
 
-    $('table.unstackable').basictable();
+    $('table.unstackable.responsive').basictable();
 
     $('.ui.checkbox').checkbox();
 
