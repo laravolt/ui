@@ -1,5 +1,7 @@
 $(function () {
 
+    $('table.unstackable').basictable();
+
     $('.ui.checkbox').checkbox();
 
     $('.ui.dropdown:not(.tag)').dropdown({
