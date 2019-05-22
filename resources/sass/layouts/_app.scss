@@ -70,7 +70,9 @@ body.auth {
       &.show {
         left: 0 !important;
       }
-
+      .sidebar__wrapper {
+        padding-bottom: $header-height;
+      }
     }
 
   }
@@ -118,6 +120,7 @@ body.auth {
   }
 
   .sidebar__menu {
+    padding-bottom: 1.5rem;
     .brand {
       text-transform: uppercase;
       font-weight: 400;
