@@ -97,6 +97,35 @@ $(function () {
             })
         ;
     });
+
+  $('.ui.input.calendar').each(function (idx, elm) {
+    elm = $(elm);
+    var format = elm.data('datepicker-format');
+
+    if (!format) {
+      format = 'YYYY-MM-DD';
+    }
+
+    elm.calendar({
+      type: 'date',
+      formatter: {
+        date: function (date, settings) {
+          if (!date) {
+            return '';
+          }
+          var DD = ("0" + date.getDate()).slice(-2);
+          var MM = ("0" + (date.getMonth() + 1)).slice(-2);
+          var MMMM = settings.text.months[date.getMonth()];
+          var YY = date.getFullYear().toString().substr(2, 2);
+          var YYYY = date.getFullYear();
+
+          return format.replace('DD', DD).replace('MMMM', MMMM).replace('MM', MM).replace('YYYY', YYYY).replace('YY', YY);
+        }
+      }
+    })
+    ;
+  });
+
 });
 
 
