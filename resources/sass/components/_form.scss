@@ -43,6 +43,9 @@ $widths: (
     }
   }
 
+  input[type=time], input[type=date] {
+    width: auto;
+  }
 }
 
 .ui.form.horizontal {
