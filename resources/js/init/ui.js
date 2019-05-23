@@ -100,14 +100,20 @@ $(function () {
 
   $('.ui.input.calendar').each(function (idx, elm) {
     elm = $(elm);
-    var format = elm.data('datepicker-format');
 
+    var type = elm.data('calendar-type');
+    if (!type) {
+      type = 'date';
+    }
+
+    var format = elm.data('calendar-format');
     if (!format) {
       format = 'YYYY-MM-DD';
     }
 
     elm.calendar({
-      type: 'date',
+      type: type,
+      ampm: false,
       formatter: {
         date: function (date, settings) {
           if (!date) {
