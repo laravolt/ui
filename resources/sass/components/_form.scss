@@ -43,8 +43,18 @@ $widths: (
     }
   }
 
+  // Do not stretch 100% width
   input[type=time], input[type=date] {
     width: auto;
+  }
+
+  // Tweak to make native form validation showed on dropdown select
+  .ui.dropdown select[required] {
+    display: initial !important;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
   }
 }
 
