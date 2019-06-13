@@ -1,14 +1,5 @@
 <?php
-
-// @todo: move filter somewhere else
-$items = app('laravolt.menu')->roots()->filter(
-    function ($item) {
-        $skipAuthorization = $item->data('permission') === null;
-
-        return $skipAuthorization || auth()->user()->can($item->data('permission'));
-    }
-);
-
+$items = app('laravolt.menu.sidebar')->all();
 ?>
 <nav class="sidebar">
     <div class="sidebar__wrapper" data-role="sidebar">

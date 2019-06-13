@@ -37,6 +37,10 @@ class ServiceProvider extends BaseServiceProvider
             }
         );
 
+        $this->app->singleton('laravolt.menu.sidebar', function () {
+            return new \Laravolt\Ui\Menu\Manager('sidebar');
+        });
+
         // We add default menu in register() method,
         // to make sure it is always accessible by other providers.
         $this->app['laravolt.menu']->add('System');
@@ -155,6 +159,7 @@ class ServiceProvider extends BaseServiceProvider
             });
         }
 
-        \Stolz\Assets\Laravel\Facade::group('laravolt')->registerCollection('vegas', ['laravolt/lib/vegas/vegas.min.css', 'laravolt/lib/vegas/vegas.min.js']);
+        \Stolz\Assets\Laravel\Facade::group('laravolt')
+            ->registerCollection('vegas', ['laravolt/lib/vegas/vegas.min.css', 'laravolt/lib/vegas/vegas.min.js']);
     }
 }
