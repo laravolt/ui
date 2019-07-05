@@ -25,10 +25,14 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
+        $this->app->singleton('laravolt.menu.sidebar', function () {
+            return new Menu();
+        });
+
         $this->app->singleton(
             'laravolt.menu',
             function (Application $app) {
-                return (new Menu())->make(
+                return app('laravolt.menu.sidebar')->make(
                     'sidebar',
                     function (Builder $menu) {
                         return $menu;
@@ -155,6 +159,7 @@ class ServiceProvider extends BaseServiceProvider
             });
         }
 
-        \Stolz\Assets\Laravel\Facade::group('laravolt')->registerCollection('vegas', ['laravolt/lib/vegas/vegas.min.css', 'laravolt/lib/vegas/vegas.min.js']);
+        \Stolz\Assets\Laravel\Facade::group('laravolt')
+            ->registerCollection('vegas', ['laravolt/lib/vegas/vegas.min.css', 'laravolt/lib/vegas/vegas.min.js']);
     }
 }
