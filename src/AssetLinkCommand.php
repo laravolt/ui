@@ -28,7 +28,7 @@ class AssetLinkCommand extends Command
     public function handle()
     {
         if (file_exists(public_path('laravolt'))) {
-            return $this->error('The "public/laravolt" directory already exists.');
+            return $this->info('The "public/laravolt" directory already exists.');
         }
 
         $this->laravel->make('files')->link(
