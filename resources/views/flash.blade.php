@@ -3,7 +3,7 @@
         @foreach($bags as $bag)
         Messenger({
             extraClasses: 'messenger-fixed messenger-on-top animated',
-            theme: 'dark'
+            theme: '{{ config('laravolt.ui.flash.theme') }}'
         }).post({!! json_encode($bag) !!});
         @endforeach
     </script>

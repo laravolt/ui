@@ -1,4 +1,5 @@
 <?php
+
 namespace Laravolt\Ui;
 
 use Illuminate\Contracts\View\Factory;
@@ -7,7 +8,6 @@ use Illuminate\Session\Store;
 
 class Flash
 {
-
     protected $session;
 
     protected $view;
@@ -20,20 +20,21 @@ class Flash
         'message'         => null,
         'type'            => 'basic',
         'showCloseButton' => true,
-        'hideAfter'       => false,
+        'hideAfter'       => 10,
     ];
 
     protected $bags = [];
 
     /**
      * Flash constructor.
-     * @param Store $session
-     * @param View  $view
+     * @param  Store  $session
+     * @param  View  $view
      */
     public function __construct(Store $session, Factory $view)
     {
         $this->session = $session;
         $this->view = $view;
+        $this->attributes = $this->defaultConfig() + $this->attributes;
     }
 
     public function message($message, $type = 'basic')
@@ -88,9 +89,9 @@ class Flash
         $script = $this->view->make('ui::flash', compact('bags'))->render();
 
         if (false !== $pos) {
-            $content = substr($content, 0, $pos) . $script . substr($content, $pos);
+            $content = substr($content, 0, $pos).$script.substr($content, $pos);
         } else {
-            $content = $content . $script;
+            $content = $content.$script;
         }
 
         $response->setContent($content);
@@ -111,5 +112,12 @@ class Flash
     public function hasMessage()
     {
         return !empty($this->bags);
+    }
+
+    private function defaultConfig()
+    {
+        return collect(config('laravolt.ui.flash'))->mapWithKeys(function ($item, $key) {
+            return [camel_case($key) => $item];
+        })->toArray();
     }
 }

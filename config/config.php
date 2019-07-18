@@ -14,4 +14,9 @@ return [
             // 'topbar_inverted'   => true,
         ],
     ],
+    'flash'          => [
+        'show_close_button' => true,
+        'hide_after'        => 10,
+        'theme'             => 'dark',
+    ],
 ];
