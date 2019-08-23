@@ -17,10 +17,12 @@ class Flash
     protected $now = false;
 
     protected $attributes = [
-        'message'         => null,
-        'type'            => 'basic',
-        'showCloseButton' => true,
-        'hideAfter'       => 10,
+        'message' => null,
+        'class' => 'info',
+        'closeIcon' => false,
+        'displayTime' => 3000,
+        'opacity' => 0.9,
+        'position' => 'top center'
     ];
 
     protected $bags = [];
@@ -40,7 +42,7 @@ class Flash
     public function message($message, $type = 'basic')
     {
         $this->attributes['message'] = $message;
-        $this->attributes['type'] = $type;
+        $this->attributes['class'] = $type;
 
         $this->bags[] = $this->attributes;
 
@@ -79,7 +81,7 @@ class Flash
         $bags = $this->session->get($this->getSessionKey());
 
         usort($bags, function ($item, $next) {
-            if ($item['type'] == 'error') {
+            if ($item['class'] == 'error') {
                 return 1;
             }
 

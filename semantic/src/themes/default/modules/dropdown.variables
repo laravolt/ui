@@ -99,6 +99,7 @@
 /* Item Sub-Element */
 @itemElementFloat: none;
 @itemElementDistance: @mini;
+@itemElementBottomDistance: @itemElementDistance / 2;
 
 /* Sub-Menu Dropdown Icon */
 @itemDropdownIconDistance: 1em;
@@ -274,6 +275,9 @@
 @labelHorizontalPadding: @relativeMini;
 @labelPadding: @labelVerticalPadding @labelHorizontalPadding;
 
+@imageLabelHeight: (1em + @labelVerticalPadding * 2);  /* Logic adopted from label.less */
+@imageLabelImageMargin: -@labelVerticalPadding @labelHorizontalPadding -@labelVerticalPadding -@labelHorizontalPadding;
+
 /*-------------------
        States
 --------------------*/
@@ -372,7 +376,6 @@
 
 @pointingMenuDistance: @mini;
 @pointingMenuBorderRadius: @borderRadius;
-@pointingArrowBoxShadow: -@menuBorderWidth -@menuBorderWidth 0 0 @menuBorderColor;
 
 /* Pointing Upward */
 @pointingUpwardMenuBorderRadius: @borderRadius;
@@ -386,8 +389,12 @@
 /* General rules and basic dropdowns */
 @invertedMenuBackground: @black;
 @invertedMenuColor: @invertedMutedTextColor;
-@invertedMenuBorder: 1px solid @strongTransparentWhite;
+@invertedMenuBorderColor: @strongTransparentWhite;
+@invertedMenuBorder: 1px solid @invertedMenuBorderColor;
 @invertedMenuBoxShadow: none;
+
+@invertedPointingArrowBackground: @black;
+@invertedPointingArrowBoxShadow: -@menuBorderWidth -@menuBorderWidth 0 0 @invertedMenuBorderColor;
 
 @invertedHoveredItemBackground: @transparentWhite;
 @invertedHoveredItemColor: @invertedMenuColor;

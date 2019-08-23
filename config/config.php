@@ -15,8 +15,8 @@ return [
         ],
     ],
     'flash'          => [
-        'show_close_button' => true,
-        'hide_after'        => 10,
-        'theme'             => 'dark',
+        'display_time' => 3000,
+        'opacity' => 0.9,
+        'position' => 'top center'
     ],
 ];
