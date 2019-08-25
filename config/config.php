@@ -15,7 +15,7 @@ return [
         ],
     ],
     'flash'          => [
-        'display_time' => 3000,
+        'display_time' => 5000,
         'opacity' => 0.9,
         'position' => 'top center'
     ],

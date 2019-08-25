@@ -20,9 +20,11 @@ class Flash
         'message' => null,
         'class' => 'info',
         'closeIcon' => false,
-        'displayTime' => 3000,
+        'displayTime' => 5000,
         'opacity' => 0.9,
-        'position' => 'top center'
+        'position' => 'top center',
+        'compact' => false,
+        'newestOnTop' => true,
     ];
 
     protected $bags = [];
