@@ -1,4 +1,5 @@
 <?php
+
 $items = app('laravolt.menu.sidebar')->all();
 ?>
 <nav class="sidebar">
@@ -7,13 +8,13 @@ $items = app('laravolt.menu.sidebar')->all();
         <div class="sidebar__menu">
             @include('ui::menu.sidebar_brand')
 
-            @if(config('laravolt.ui.quick_switcher'))
-                @include('ui::quick-switcher.sidebar')
-                @include('ui::quick-switcher.modal')
-            @endif
+            @if(!$items->isEmpty())
+                @if(config('laravolt.ui.quick_switcher'))
+                    @include('ui::quick-switcher.sidebar')
+                    @include('ui::quick-switcher.modal')
+                @endif
 
-            <div class="ui attached vertical menu fluid" data-role="original-menu">
-                @if(!$items->isEmpty())
+                <div class="ui attached vertical menu fluid" data-role="original-menu">
 
                     @foreach($items as $item)
                         @if($item->hasChildren())
@@ -32,8 +33,9 @@ $items = app('laravolt.menu.sidebar')->all();
                             </div>
                         @endif
                     @endforeach
-                @endif
-            </div>
+                </div>
+            @endif
+
         </div>
     </div>
 </nav>
