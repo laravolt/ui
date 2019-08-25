@@ -9,8 +9,8 @@
         <div class="content">
             <div class="content__inner">
                 <div class="ui container-fluid content__body p-1">
-                    @isset($page)
-                        @include('ui::components.page-header', $page)
+                    @isset($__page)
+                        @include('ui::components.page-header', $__page)
                     @endisset
 
                     @yield('content')
