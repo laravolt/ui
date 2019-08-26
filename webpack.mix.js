@@ -18,6 +18,7 @@ mix.scripts([
     './node_modules/simplebar/dist/simplebar.js',
     'resources/js/components/basictable.js',
     'resources/js/components/keymaster.js',
+    'resources/js/components/fileuploader.js',
     'resources/js/components/fuse.min.js',
     'resources/js/init/sidebar.js',
     'resources/js/init/ui.js',
