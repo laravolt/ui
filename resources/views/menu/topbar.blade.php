@@ -41,7 +41,7 @@
         <div class="item">
         </div>
         <div class="ui item dropdown simple right">
-            <img src="{{ \Laravolt\Avatar\Facade::create(auth()->user()->name)->toBase64() }}" alt="" class="ui image avatar">
+            <img src="{{ auth()->user()->avatar }}" alt="" class="ui image avatar">
             {{ auth()->user()->name }}
             <i class="icon dropdown"></i>
             <div class="menu">
