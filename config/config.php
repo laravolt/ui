@@ -20,6 +20,6 @@ return [
             'opacity' => 0.9,
             'position' => 'top center',
         ],
-        'except' => ['auth/login'],
+        'except' => [],
     ],
 ];
