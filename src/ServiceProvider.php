@@ -63,7 +63,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->publishes(
             [
                 $this->packagePath('config/config.php') => config_path('laravolt/ui.php'),
-                $this->packagePath('config/menu.php')   => config_path('laravolt/menu.php'),
+                $this->packagePath('config/menu.php') => config_path('laravolt/menu.php'),
             ]
         );
 
@@ -153,13 +153,19 @@ class ServiceProvider extends BaseServiceProvider
             $this->app->singleton("stolz.assets.group.laravolt", function () {
                 return new Manager([
                     'public_dir' => public_path('laravolt'),
-                    'css_dir'    => '',
-                    'js_dir'     => '',
+                    'css_dir' => '',
+                    'js_dir' => '',
                 ]);
             });
         }
 
         \Stolz\Assets\Laravel\Facade::group('laravolt')
-            ->registerCollection('vegas', ['laravolt/lib/vegas/vegas.min.css', 'laravolt/lib/vegas/vegas.min.js']);
+            ->registerCollection(
+                'vegas',
+                [
+                    'laravolt/plugins/vegas/vegas.min.css',
+                    'laravolt/plugins/vegas/vegas.min.js',
+                ]
+            );
     }
 }
