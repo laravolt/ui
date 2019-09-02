@@ -36,6 +36,11 @@ class FlashMiddleware
         /** @var \Illuminate\Http\Response $response */
         $response = $next($request);
 
+        // Skip flash for some routes registered in "except" config
+        if ($this->flash->inExceptArray($request)) {
+            return $response;
+        }
+
         try {
             if ($request->session()->has('errors')) {
                 $message = $request->session()->get('errors');

@@ -15,8 +15,11 @@ return [
         ],
     ],
     'flash'          => [
-        'display_time' => 5000,
-        'opacity' => 0.9,
-        'position' => 'top center'
+        'attributes' => [
+            'display_time' => 5000,
+            'opacity' => 0.9,
+            'position' => 'top center',
+        ],
+        'except' => ['auth/login'],
     ],
 ];

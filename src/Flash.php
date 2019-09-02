@@ -3,6 +3,7 @@
 namespace Laravolt\Ui;
 
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Session\Store;
 
@@ -29,6 +30,8 @@ class Flash
 
     protected $bags = [];
 
+    protected $except = [];
+
     /**
      * Flash constructor.
      * @param  Store  $session
@@ -38,7 +41,8 @@ class Flash
     {
         $this->session = $session;
         $this->view = $view;
-        $this->attributes = $this->defaultConfig() + $this->attributes;
+        $this->attributes = $this->defaultAttributes() + $this->attributes;
+        $this->except = config('laravolt.ui.flash.except');
     }
 
     public function message($message, $type = 'basic')
@@ -118,9 +122,24 @@ class Flash
         return !empty($this->bags);
     }
 
-    private function defaultConfig()
+    public function inExceptArray(Request $request)
     {
-        return collect(config('laravolt.ui.flash'))->mapWithKeys(function ($item, $key) {
+        foreach ($this->except as $except) {
+            if ($except !== '/') {
+                $except = trim($except, '/');
+            }
+
+            if ($request->is($except)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private function defaultAttributes()
+    {
+        return collect(config('laravolt.ui.flash.attributes'))->mapWithKeys(function ($item, $key) {
             return [camel_case($key) => $item];
         })->toArray();
     }
