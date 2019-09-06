@@ -38,7 +38,7 @@ class Menu extends BaseMenu
         $sidebar = $this->get('sidebar');
 
         $items = $sidebar->all()->map(function (Item $item) {
-            $item->data('is-parent', $item->hasChildren());
+            $item->data('is-parent', $item->hasChildren() || (!$item->hasChildren() && !$item->link->path['url']));
 
             return $item;
         });
