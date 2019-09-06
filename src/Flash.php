@@ -6,6 +6,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Session\Store;
+use Illuminate\Support\Str;
 
 class Flash
 {
@@ -140,7 +141,7 @@ class Flash
     private function defaultAttributes()
     {
         return collect(config('laravolt.ui.flash.attributes'))->mapWithKeys(function ($item, $key) {
-            return [camel_case($key) => $item];
+            return [Str::camel($key) => $item];
         })->toArray();
     }
 }
