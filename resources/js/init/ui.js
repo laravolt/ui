@@ -229,7 +229,7 @@ $(function () {
   });
 
   if (typeof AutoNumeric === 'function') {
-    new AutoNumeric('input[data-role="rupiah"]', {
+    AutoNumeric.multiple('input[data-role="rupiah"]', {
       currencySymbol: '',
       decimalCharacter: ',',
       digitGroupSeparator: '.',
