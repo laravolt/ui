@@ -90,7 +90,7 @@ class ServiceProvider extends BaseServiceProvider
     /**
      * Loads a path relative to the package base directory
      *
-     * @param  string  $path
+     * @param string $path
      * @return string
      */
     protected function packagePath($path = '')
@@ -165,6 +165,11 @@ class ServiceProvider extends BaseServiceProvider
                 [
                     'laravolt/plugins/vegas/vegas.min.css',
                     'laravolt/plugins/vegas/vegas.min.js',
+                ]
+            )->registerCollection(
+                'autoNumeric',
+                [
+                    'laravolt/plugins/autoNumeric.min.js',
                 ]
             );
     }

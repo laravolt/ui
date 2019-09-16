@@ -227,6 +227,17 @@ $(function () {
       }
     });
   });
+
+  if (typeof AutoNumeric === 'function') {
+    new AutoNumeric('input[data-role="rupiah"]', {
+      currencySymbol: '',
+      decimalCharacter: ',',
+      digitGroupSeparator: '.',
+      decimalPlaces: 0,
+      unformatOnSubmit: true,
+    });
+  }
+
 });
 
 
