@@ -61,6 +61,9 @@ class MenuBuilder
                     $name,
                     $option['url'] ?? (isset($option['route']) ? route($option['route']) : '#')
                 );
+                if (isset($option['active'])) {
+                    $menu->active($option['active']);
+                }
             } else {
                 $menu = $parent->add($name, '#');
                 $this->addMenu($menu, $option['menu']);
