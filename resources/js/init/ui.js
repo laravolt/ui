@@ -134,13 +134,20 @@ $(function () {
 
   $('input[type=file].uploader').each(function (idx, elm) {
     $(elm).fileuploader({
+      theme: 'simple',
+      limit: $(elm).data('limit'),
+      extensions: $(elm).data('extensions'),
       changeInput: '<div class="fileuploader-input">' +
         '<div class="fileuploader-input-inner">' +
-        '<div>${captions.feedback} ${captions.or} <span>${captions.button}</span></div>' +
+        '<div><span>${captions.browse}</span></div>' +
         '</div>' +
         '</div>',
-      theme: 'simple',
-      limit: 1,
+      captions: {
+        browse: 'Browse or drop files here'
+      },
+      thumbnails: {
+        removeConfirmation: false
+      },
       // upload: {
       //   url: $(elm).data('url-upload'),
       //   data: {'_token': $(elm).parents('form').find('input[name=_token]').val()},
@@ -219,11 +226,6 @@ $(function () {
           $.post('./php/ajax_remove_file.php', {
             file: item.name
           });
-      },
-      captions: {
-        feedback: 'Drag and drop files here',
-        or: 'or',
-        button: 'Browse Files'
       }
     });
   });
