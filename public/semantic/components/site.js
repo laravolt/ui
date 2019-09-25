@@ -1,6 +1,6 @@
 /*!
- * # Semantic UI 2.7.4 - Site
- * http://github.com/semantic-org/semantic-ui/
+ * # Fomantic-UI - Site
+ * http://github.com/fomantic/Fomantic-UI/
  *
  *
  * Released under the MIT license

@@ -1,6 +1,6 @@
 /*!
- * # Semantic UI 2.7.4 - Site
- * http://github.com/semantic-org/semantic-ui/
+ * # Fomantic-UI - Site
+ * http://github.com/fomantic/Fomantic-UI/
  *
  *
  * Released under the MIT license
@@ -125,6 +125,10 @@ a:hover {
   background-color: #CCE2FF;
   color: #373e43;
 }
+::-moz-selection {
+  background-color: #CCE2FF;
+  color: #373e43;
+}
 ::selection {
   background-color: #CCE2FF;
   color: #373e43;
@@ -133,6 +137,11 @@ a:hover {
 /* Form */
 textarea::-webkit-selection,
 input::-webkit-selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: #373e43;
+}
+textarea::-moz-selection,
+input::-moz-selection {
   background-color: rgba(100, 100, 100, 0.4);
   color: #373e43;
 }
@@ -179,12 +188,6 @@ body .ui.inverted:not(.dimmer)::-webkit-scrollbar-thumb:window-inactive {
 body .ui.inverted:not(.dimmer)::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.35);
 }
-
-
-/*******************************
-        Global Overrides
-*******************************/
-
 
 
 /*******************************

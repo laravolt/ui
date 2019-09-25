@@ -1,6 +1,6 @@
 /*!
- * # Semantic UI 2.7.4 - Tab
- * http://github.com/semantic-org/semantic-ui/
+ * # Fomantic-UI - Tab
+ * http://github.com/fomantic/Fomantic-UI/
  *
  *
  * Released under the MIT license
@@ -99,6 +99,11 @@ $.fn.tab = function(parameters) {
             module.initializeHistory();
             initializedHistory = true;
           }
+
+          if(module.determine.activeTab() == null) {
+            module.debug('No active tab detected, setting first tab active', module.get.initialPath());
+            module.changeTab(module.get.initialPath());
+          };
 
           module.instantiate();
         },
@@ -676,6 +681,29 @@ $.fn.tab = function(parameters) {
           },
           tab: function() {
             return activeTabPath;
+          }
+        },
+
+        determine: {
+          activeTab: function() {
+            var activeTab = null;
+
+            $tabs.each(function(_index, tab) {
+              var $tab = $(tab);
+
+              if( $tab.hasClass(className.active) ) {
+                var
+                  tabPath = $(this).data(metadata.tab),
+                  $anchor = $allModules.filter('[data-' + metadata.tab + '="' + module.escape.string(tabPath) + '"]')
+                ;
+
+                if( $anchor.hasClass(className.active) ) {
+                  activeTab = tabPath;
+                }
+              }
+            });
+
+            return activeTab;
           }
         },
 

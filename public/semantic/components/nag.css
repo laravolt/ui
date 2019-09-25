@@ -1,6 +1,6 @@
 /*!
- * # Semantic UI 2.7.4 - Nag
- * http://github.com/semantic-org/semantic-ui/
+ * # Fomantic-UI - Nag
+ * http://github.com/fomantic/Fomantic-UI/
  *
  *
  * Released under the MIT license
@@ -134,12 +134,6 @@ a.ui.nag {
 .ui.bottom.nags .nag:last-child {
   border-radius: 0.30769231rem 0.30769231rem 0 0;
 }
-
-
-/*******************************
-         Theme Overrides
-*******************************/
-
 
 
 /*******************************

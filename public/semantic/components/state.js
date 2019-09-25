@@ -1,6 +1,6 @@
 /*!
- * # Semantic UI 2.7.4 - State
- * http://github.com/semantic-org/semantic-ui/
+ * # Fomantic-UI - State
+ * http://github.com/fomantic/Fomantic-UI/
  *
  *
  * Released under the MIT license
