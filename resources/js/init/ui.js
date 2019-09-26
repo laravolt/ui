@@ -133,10 +133,17 @@ $(function () {
   });
 
   $('input[type=file].uploader').each(function (idx, elm) {
+    var extensions = $(elm).data('extensions');
+    if (extensions) {
+      extensions = extensions.split(',');
+    } else {
+      extensions = null;
+    }
+
     $(elm).fileuploader({
       theme: 'simple',
       limit: $(elm).data('limit'),
-      extensions: $(elm).data('extensions'),
+      extensions: extensions,
       changeInput: '<div class="fileuploader-input">' +
         '<div class="fileuploader-input-inner">' +
         '<div><span>${captions.browse}</span></div>' +
