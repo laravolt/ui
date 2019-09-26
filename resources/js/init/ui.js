@@ -296,6 +296,47 @@ $(function () {
       });
     });
   }
+
+
+  if (typeof google === 'object' && typeof google.maps === 'object') {
+    $('[data-form-coordinate]').each(function () {
+      var input = $(this);
+      var long, lat;
+      [lat, long] = input.val().split(',');
+      lat = lat || -7.451808;
+      long = long || 111.035929;
+
+      var mapContainer = $('<div>')
+        .css('width', '100%')
+        .css('height', 300)
+        .css('border-radius', 4)
+        .css('margin-top', '5px');
+
+      mapContainer.insertAfter($(this));
+
+      var center = new google.maps.LatLng(lat, long);
+      var options = {
+        zoom: 17,
+        center: center,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapContainer[0], options);
+
+      var marker = new google.maps.Marker({
+        position: center,
+        map: map,
+        draggable: true
+      });
+      google.maps.event.addListener(
+        marker,
+        'drag',
+        function () {
+          input.val(marker.position.lat() + ',' + marker.position.lng());
+        }
+      );
+    });
+  }
+
 });
 
 
