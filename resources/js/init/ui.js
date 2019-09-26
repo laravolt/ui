@@ -327,6 +327,12 @@ $(function () {
         center: center,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       }
+      if ($(this).is('[disabled]')) {
+        $.extend(options, {
+          gestureHandling: 'none',
+          zoomControl: false
+        });
+      }
       var map = new google.maps.Map(mapContainer[0], options);
 
       var marker = new google.maps.Marker({
