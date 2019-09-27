@@ -154,7 +154,6 @@ $(function () {
       },
       thumbnails: {
         removeConfirmation: false
-      //   type: 'POST',
       }
     });
   });
