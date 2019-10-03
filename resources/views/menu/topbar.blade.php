@@ -40,6 +40,8 @@
         {{--</div>--}}
         <div class="item">
         </div>
+
+        @auth()
         <div class="ui item dropdown simple right">
             <img src="{{ auth()->user()->avatar }}" alt="" class="ui image avatar">
             {{ auth()->user()->name }}
@@ -52,6 +54,7 @@
                 <a href="{{ route('auth::logout') }}" class="item">Logout</a>
             </div>
         </div>
+        @endauth
 
     </div>
 </header>
