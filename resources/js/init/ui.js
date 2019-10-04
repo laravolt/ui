@@ -144,6 +144,7 @@ $(function () {
       theme: 'simple',
       limit: $(elm).data('limit'),
       extensions: extensions,
+      addMore: true,
       changeInput: '<div class="fileuploader-input">' +
         '<div class="fileuploader-input-inner">' +
         '<div><span>${captions.browse}</span></div>' +
