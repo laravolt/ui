@@ -249,7 +249,9 @@ $(function () {
         center: center,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       }
-      if ($(this).is('[disabled]')) {
+      var disabled = $(this).is('[disabled]');
+
+      if (disabled) {
         $.extend(options, {
           gestureHandling: 'none',
           zoomControl: false
@@ -260,7 +262,7 @@ $(function () {
       var marker = new google.maps.Marker({
         position: center,
         map: map,
-        draggable: true
+        draggable: !disabled
       });
       google.maps.event.addListener(
         marker,
